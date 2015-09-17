@@ -48,6 +48,13 @@ enum BRepLib_EdgeError {
 	BRepLib_LineThroughIdenticPoints = 6,
 };
 
+enum BRepLib_WireError {
+	BRepLib_WireDone = 0,
+	BRepLib_EmptyWire = 1,
+	BRepLib_DisconnectedWire = 2,
+	BRepLib_NonManifoldWire = 3,
+};
+
 enum BRepLib_FaceError {
 	BRepLib_FaceDone = 0,
 	BRepLib_NoFace = 1,
@@ -69,13 +76,6 @@ enum BRepLib_ShellError {
 	BRepLib_EmptyShell = 1,
 	BRepLib_DisconnectedShell = 2,
 	BRepLib_ShellParametersOutOfRange = 3,
-};
-
-enum BRepLib_WireError {
-	BRepLib_WireDone = 0,
-	BRepLib_EmptyWire = 1,
-	BRepLib_DisconnectedWire = 2,
-	BRepLib_NonManifoldWire = 3,
 };
 
 /* end public enums declaration */

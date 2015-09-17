@@ -66,10 +66,13 @@ typedef unsigned __int16 uint16_t;
 /* end typedefs declaration */
 
 /* public enums */
-enum Standard_HandlerStatus {
-	Standard_HandlerVoid = 0,
-	Standard_HandlerJumped = 1,
-	Standard_HandlerProcessed = 2,
+enum Standard_KindOfType {
+	Standard_IsUnKnown = 0,
+	Standard_IsClass = 1,
+	Standard_IsEnumeration = 2,
+	Standard_IsPrimitive = 3,
+	Standard_IsImported = 4,
+	Standard_IsPackage = 5,
 };
 
 enum Standard_InternalType {
@@ -89,13 +92,10 @@ enum Standard_InternalType {
 	Standard_Array = 13,
 };
 
-enum Standard_KindOfType {
-	Standard_IsUnKnown = 0,
-	Standard_IsClass = 1,
-	Standard_IsEnumeration = 2,
-	Standard_IsPrimitive = 3,
-	Standard_IsImported = 4,
-	Standard_IsPackage = 5,
+enum Standard_HandlerStatus {
+	Standard_HandlerVoid = 0,
+	Standard_HandlerJumped = 1,
+	Standard_HandlerProcessed = 2,
 };
 
 enum Standard_WayOfLife {

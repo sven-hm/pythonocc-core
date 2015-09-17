@@ -40,25 +40,6 @@ typedef NCollection_Vector <Interface_FileParameter> Interface_VectorOfFileParam
 /* end typedefs declaration */
 
 /* public enums */
-enum Interface_CheckStatus {
-	Interface_CheckOK = 0,
-	Interface_CheckWarning = 1,
-	Interface_CheckFail = 2,
-	Interface_CheckAny = 3,
-	Interface_CheckMessage = 4,
-	Interface_CheckNoFail = 5,
-};
-
-enum Interface_DataState {
-	Interface_StateOK = 0,
-	Interface_LoadWarning = 1,
-	Interface_LoadFail = 2,
-	Interface_DataWarning = 3,
-	Interface_DataFail = 4,
-	Interface_StateUnloaded = 5,
-	Interface_StateUnknown = 6,
-};
-
 enum Interface_ParamType {
 	Interface_ParamMisc = 0,
 	Interface_ParamInteger = 1,
@@ -71,6 +52,25 @@ enum Interface_ParamType {
 	Interface_ParamSub = 8,
 	Interface_ParamHexa = 9,
 	Interface_ParamBinary = 10,
+};
+
+enum Interface_DataState {
+	Interface_StateOK = 0,
+	Interface_LoadWarning = 1,
+	Interface_LoadFail = 2,
+	Interface_DataWarning = 3,
+	Interface_DataFail = 4,
+	Interface_StateUnloaded = 5,
+	Interface_StateUnknown = 6,
+};
+
+enum Interface_CheckStatus {
+	Interface_CheckOK = 0,
+	Interface_CheckWarning = 1,
+	Interface_CheckFail = 2,
+	Interface_CheckAny = 3,
+	Interface_CheckMessage = 4,
+	Interface_CheckNoFail = 5,
 };
 
 /* end public enums declaration */

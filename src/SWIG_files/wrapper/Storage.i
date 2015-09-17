@@ -40,6 +40,12 @@ typedef long Storage_Position;
 /* end typedefs declaration */
 
 /* public enums */
+enum Storage_SolveMode {
+	Storage_AddSolve = 0,
+	Storage_WriteSolve = 1,
+	Storage_ReadSolve = 2,
+};
+
 enum Storage_Error {
 	Storage_VSOk = 0,
 	Storage_VSOpenError = 1,
@@ -62,12 +68,6 @@ enum Storage_OpenMode {
 	Storage_VSRead = 1,
 	Storage_VSWrite = 2,
 	Storage_VSReadWrite = 3,
-};
-
-enum Storage_SolveMode {
-	Storage_AddSolve = 0,
-	Storage_WriteSolve = 1,
-	Storage_ReadSolve = 2,
 };
 
 /* end public enums declaration */

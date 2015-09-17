@@ -38,15 +38,15 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 /* end typedefs declaration */
 
 /* public enums */
-enum BSplCLib_KnotDistribution {
-	BSplCLib_NonUniform = 0,
-	BSplCLib_Uniform = 1,
-};
-
 enum BSplCLib_MultDistribution {
 	BSplCLib_NonConstant = 0,
 	BSplCLib_Constant = 1,
 	BSplCLib_QuasiConstant = 2,
+};
+
+enum BSplCLib_KnotDistribution {
+	BSplCLib_NonUniform = 0,
+	BSplCLib_Uniform = 1,
 };
 
 /* end public enums declaration */

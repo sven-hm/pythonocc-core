@@ -35,8 +35,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 %include TopOpeBRepBuild_headers.i
 
 /* typedefs */
-typedef TopOpeBRepBuild_GTopo * TopOpeBRepBuild_PGTopo;
 typedef TopOpeBRepBuild_Builder * TopOpeBRepBuild_PBuilder;
+typedef TopOpeBRepBuild_GTopo * TopOpeBRepBuild_PGTopo;
 typedef TopOpeBRepBuild_WireEdgeSet * TopOpeBRepBuild_PWireEdgeSet;
 /* end typedefs declaration */
 

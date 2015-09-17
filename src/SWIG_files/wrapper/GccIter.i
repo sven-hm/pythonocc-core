@@ -38,13 +38,9 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 /* end typedefs declaration */
 
 /* public enums */
-enum GccIter_Type1 {
-	GccIter_CuCuCu = 0,
-	GccIter_CiCuCu = 1,
-	GccIter_CiCiCu = 2,
-	GccIter_CiLiCu = 3,
-	GccIter_LiLiCu = 4,
-	GccIter_LiCuCu = 5,
+enum GccIter_Type3 {
+	GccIter_CuCu = 0,
+	GccIter_CiCu = 1,
 };
 
 enum GccIter_Type2 {
@@ -62,9 +58,13 @@ enum GccIter_Type2 {
 	GccIter_CuPtOnCi = 11,
 };
 
-enum GccIter_Type3 {
-	GccIter_CuCu = 0,
-	GccIter_CiCu = 1,
+enum GccIter_Type1 {
+	GccIter_CuCuCu = 0,
+	GccIter_CiCuCu = 1,
+	GccIter_CiCiCu = 2,
+	GccIter_CiLiCu = 3,
+	GccIter_LiLiCu = 4,
+	GccIter_LiCuCu = 5,
 };
 
 /* end public enums declaration */

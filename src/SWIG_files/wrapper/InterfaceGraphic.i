@@ -37,12 +37,12 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 /* typedefs */
 typedef int Tint;
 typedef TEL_TEXTURE_COORD * tel_texture_coord;
-typedef double Tdouble;
 typedef unsigned short Techar;
-typedef TEL_POINT * tel_point;
+typedef double Tdouble;
 typedef TEL_COLOUR * tel_colour;
 typedef signed char Tchar;
 typedef TEL_TRANSFORM_PERSISTENCE * tel_transform_persistence;
+typedef TEL_POINT * tel_point;
 typedef float Tfloat;
 typedef unsigned int Tuint;
 typedef TEL_POFFSET_PARAM * tel_poffset_param;

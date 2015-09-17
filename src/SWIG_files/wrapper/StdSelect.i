@@ -38,12 +38,6 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 /* end typedefs declaration */
 
 /* public enums */
-enum StdSelect_DisplayMode {
-	StdSelect_DM_Wireframe = 0,
-	StdSelect_DM_Shading = 1,
-	StdSelect_DM_HLR = 2,
-};
-
 enum StdSelect_SensitivityMode {
 	StdSelect_SM_WINDOW = 0,
 	StdSelect_SM_VIEW = 1,
@@ -53,6 +47,12 @@ enum StdSelect_TypeOfEdge {
 	StdSelect_AnyEdge = 0,
 	StdSelect_Line = 1,
 	StdSelect_Circle = 2,
+};
+
+enum StdSelect_DisplayMode {
+	StdSelect_DM_Wireframe = 0,
+	StdSelect_DM_Shading = 1,
+	StdSelect_DM_HLR = 2,
 };
 
 enum StdSelect_TypeOfFace {

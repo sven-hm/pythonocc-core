@@ -18,6 +18,7 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 
 */
 %{
+#include<Graphic3d.hxx>
 #include<Graphic3d_Array1OfVector.hxx>
 #include<Graphic3d_Array1OfVertex.hxx>
 #include<Graphic3d_Array2OfVertex.hxx>
@@ -25,12 +26,12 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Graphic3d_ArrayOfPolygons.hxx>
 #include<Graphic3d_ArrayOfPolylines.hxx>
 #include<Graphic3d_ArrayOfPrimitives.hxx>
-#include<Graphic3d_ArrayOfQuadrangles.hxx>
 #include<Graphic3d_ArrayOfQuadrangleStrips.hxx>
+#include<Graphic3d_ArrayOfQuadrangles.hxx>
 #include<Graphic3d_ArrayOfSegments.hxx>
 #include<Graphic3d_ArrayOfTriangleFans.hxx>
-#include<Graphic3d_ArrayOfTriangles.hxx>
 #include<Graphic3d_ArrayOfTriangleStrips.hxx>
+#include<Graphic3d_ArrayOfTriangles.hxx>
 #include<Graphic3d_AspectFillArea3d.hxx>
 #include<Graphic3d_AspectLine3d.hxx>
 #include<Graphic3d_AspectMarker3d.hxx>
@@ -45,14 +46,14 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Graphic3d_CGraduatedTrihedron.hxx>
 #include<Graphic3d_CGroup.hxx>
 #include<Graphic3d_CLight.hxx>
-#include<Graphic3d_ClipPlane.hxx>
-#include<Graphic3d_ClipPlane_Handle.hxx>
 #include<Graphic3d_CPick.hxx>
 #include<Graphic3d_CStructure.hxx>
 #include<Graphic3d_CTexture.hxx>
 #include<Graphic3d_CTransPersStruct.hxx>
 #include<Graphic3d_CUserDraw.hxx>
 #include<Graphic3d_CView.hxx>
+#include<Graphic3d_ClipPlane.hxx>
+#include<Graphic3d_ClipPlane_Handle.hxx>
 #include<Graphic3d_CycleError.hxx>
 #include<Graphic3d_DataStructureManager.hxx>
 #include<Graphic3d_ExportFormat.hxx>
@@ -60,10 +61,10 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Graphic3d_Group.hxx>
 #include<Graphic3d_GroupAspect.hxx>
 #include<Graphic3d_GroupDefinitionError.hxx>
-#include<Graphic3d_HorizontalTextAlignment.hxx>
 #include<Graphic3d_HSequenceOfGroup.hxx>
 #include<Graphic3d_HSequenceOfStructure.hxx>
 #include<Graphic3d_HSetOfGroup.hxx>
+#include<Graphic3d_HorizontalTextAlignment.hxx>
 #include<Graphic3d_InitialisationError.hxx>
 #include<Graphic3d_LevelOfTextureAnisotropy.hxx>
 #include<Graphic3d_ListIteratorOfListOfPArray.hxx>
@@ -81,12 +82,12 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Graphic3d_Mat4.hxx>
 #include<Graphic3d_MaterialAspect.hxx>
 #include<Graphic3d_MaterialDefinitionError.hxx>
+#include<Graphic3d_NListOfHAsciiString.hxx>
 #include<Graphic3d_NameOfMaterial.hxx>
 #include<Graphic3d_NameOfTexture1D.hxx>
 #include<Graphic3d_NameOfTexture2D.hxx>
 #include<Graphic3d_NameOfTextureEnv.hxx>
 #include<Graphic3d_NameOfTexturePlane.hxx>
-#include<Graphic3d_NListOfHAsciiString.hxx>
 #include<Graphic3d_PickIdDefinitionError.hxx>
 #include<Graphic3d_Plotter.hxx>
 #include<Graphic3d_PlotterDefinitionError.hxx>
@@ -127,8 +128,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Graphic3d_TextureMap.hxx>
 #include<Graphic3d_TextureParams.hxx>
 #include<Graphic3d_TextureRoot.hxx>
-#include<Graphic3d_TransformError.hxx>
 #include<Graphic3d_TransModeFlags.hxx>
+#include<Graphic3d_TransformError.hxx>
 #include<Graphic3d_TypeOfComposition.hxx>
 #include<Graphic3d_TypeOfConnection.hxx>
 #include<Graphic3d_TypeOfMaterial.hxx>
@@ -150,7 +151,6 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Graphic3d_Vertex.hxx>
 #include<Graphic3d_VerticalTextAlignment.hxx>
 #include<Graphic3d_ZLayerSettings.hxx>
-#include<Graphic3d.hxx>
 #include<Aspect.hxx>
 #include<Aspect_Array1OfEdge.hxx>
 #include<Aspect_AspectFillArea.hxx>
@@ -161,9 +161,9 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Aspect_AspectMarkerDefinitionError.hxx>
 #include<Aspect_Background.hxx>
 #include<Aspect_BadAccess.hxx>
+#include<Aspect_CLayer2d.hxx>
 #include<Aspect_CardinalPoints.hxx>
 #include<Aspect_CircularGrid.hxx>
-#include<Aspect_CLayer2d.hxx>
 #include<Aspect_ColorCubeColorMap.hxx>
 #include<Aspect_ColorMap.hxx>
 #include<Aspect_ColorMapDefinitionError.hxx>
@@ -173,8 +173,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Aspect_ColorScale.hxx>
 #include<Aspect_Convert.hxx>
 #include<Aspect_Display.hxx>
-#include<Aspect_DisplayConnection_Handle.hxx>
 #include<Aspect_DisplayConnectionDefinitionError.hxx>
+#include<Aspect_DisplayConnection_Handle.hxx>
 #include<Aspect_Drawable.hxx>
 #include<Aspect_Driver.hxx>
 #include<Aspect_DriverDefinitionError.hxx>
@@ -182,6 +182,7 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Aspect_DriverPtr.hxx>
 #include<Aspect_Edge.hxx>
 #include<Aspect_EdgeDefinitionError.hxx>
+#include<Aspect_FStream.hxx>
 #include<Aspect_FillMethod.hxx>
 #include<Aspect_FontMap.hxx>
 #include<Aspect_FontMapDefinitionError.hxx>
@@ -189,9 +190,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Aspect_FontStyle.hxx>
 #include<Aspect_FontStyleDefinitionError.hxx>
 #include<Aspect_FormatOfSheetPaper.hxx>
-#include<Aspect_FStream.hxx>
-#include<Aspect_GenericColorMap.hxx>
 #include<Aspect_GenId.hxx>
+#include<Aspect_GenericColorMap.hxx>
 #include<Aspect_GradientBackground.hxx>
 #include<Aspect_GradientFillMethod.hxx>
 #include<Aspect_GraphicCallbackProc.hxx>
@@ -201,30 +201,30 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Aspect_GridType.hxx>
 #include<Aspect_Handle.hxx>
 #include<Aspect_HatchStyle.hxx>
-#include<Aspect_IdentDefinitionError.hxx>
 #include<Aspect_IFStream.hxx>
+#include<Aspect_IdentDefinitionError.hxx>
 #include<Aspect_IndexPixel.hxx>
 #include<Aspect_InteriorStyle.hxx>
 #include<Aspect_LineStyle.hxx>
 #include<Aspect_LineStyleDefinitionError.hxx>
 #include<Aspect_LineWidthDefinitionError.hxx>
 #include<Aspect_ListingType.hxx>
-#include<Aspect_MarkerStyle.hxx>
-#include<Aspect_MarkerStyleDefinitionError.hxx>
 #include<Aspect_MarkMap.hxx>
 #include<Aspect_MarkMapDefinitionError.hxx>
 #include<Aspect_MarkMapEntry.hxx>
+#include<Aspect_MarkerStyle.hxx>
+#include<Aspect_MarkerStyleDefinitionError.hxx>
 #include<Aspect_Pixel.hxx>
 #include<Aspect_PixmapDefinitionError.hxx>
 #include<Aspect_PixmapError.hxx>
 #include<Aspect_PlotMode.hxx>
 #include<Aspect_PlotterOrigin.hxx>
-#include<Aspect_PolygonOffsetMode.hxx>
 #include<Aspect_PolyStyleDefinitionError.hxx>
+#include<Aspect_PolygonOffsetMode.hxx>
 #include<Aspect_PrintAlgo.hxx>
+#include<Aspect_RGBPixel.hxx>
 #include<Aspect_RectangularGrid.hxx>
 #include<Aspect_RenderingContext.hxx>
-#include<Aspect_RGBPixel.hxx>
 #include<Aspect_SequenceNodeOfSequenceOfColor.hxx>
 #include<Aspect_SequenceNodeOfSequenceOfColorMapEntry.hxx>
 #include<Aspect_SequenceNodeOfSequenceOfFontMapEntry.hxx>
@@ -284,10 +284,10 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_Atomic.hxx>
 #include<Standard_Boolean.hxx>
 #include<Standard_Byte.hxx>
-#include<Standard_Character.hxx>
 #include<Standard_CLocaleSentry.hxx>
-#include<Standard_ConstructionError.hxx>
 #include<Standard_CString.hxx>
+#include<Standard_Character.hxx>
+#include<Standard_ConstructionError.hxx>
 #include<Standard_DefineAlloc.hxx>
 #include<Standard_DefineException.hxx>
 #include<Standard_DefineHandle.hxx>
@@ -302,20 +302,19 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_Failure.hxx>
 #include<Standard_GUID.hxx>
 #include<Standard_HandlerStatus.hxx>
+#include<Standard_IStream.hxx>
 #include<Standard_ImmutableObject.hxx>
 #include<Standard_Integer.hxx>
 #include<Standard_InternalType.hxx>
-#include<Standard_IStream.hxx>
 #include<Standard_JmpBuf.hxx>
 #include<Standard_KindOfType.hxx>
 #include<Standard_LicenseError.hxx>
 #include<Standard_LicenseNotFound.hxx>
-#include<Standard_Macro.hxx>
-#include<Standard_math.hxx>
 #include<Standard_MMgrOpt.hxx>
 #include<Standard_MMgrRaw.hxx>
 #include<Standard_MMgrRoot.hxx>
 #include<Standard_MMgrTBBalloc.hxx>
+#include<Standard_Macro.hxx>
 #include<Standard_MultiplyDefined.hxx>
 #include<Standard_Mutex.hxx>
 #include<Standard_NegativeValue.hxx>
@@ -333,16 +332,16 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_PByte.hxx>
 #include<Standard_PCharacter.hxx>
 #include<Standard_PErrorHandler.hxx>
+#include<Standard_PExtCharacter.hxx>
 #include<Standard_Persistent.hxx>
 #include<Standard_Persistent_proto.hxx>
-#include<Standard_PExtCharacter.hxx>
 #include<Standard_PrimitiveTypes.hxx>
 #include<Standard_ProgramError.hxx>
 #include<Standard_RangeError.hxx>
 #include<Standard_Real.hxx>
+#include<Standard_SStream.hxx>
 #include<Standard_ShortReal.hxx>
 #include<Standard_Size.hxx>
-#include<Standard_SStream.hxx>
 #include<Standard_Storable.hxx>
 #include<Standard_Stream.hxx>
 #include<Standard_ThreadId.hxx>
@@ -353,10 +352,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_Type.hxx>
 #include<Standard_TypeDef.hxx>
 #include<Standard_TypeMismatch.hxx>
-#include<Standard_Underflow.hxx>
 #include<Standard_UUID.hxx>
+#include<Standard_Underflow.hxx>
 #include<Standard_Version.hxx>
 #include<Standard_WayOfLife.hxx>
+#include<Standard_math.hxx>
 #include<Standard_values.h>
 #include<MMgt_TShared.hxx>
 #include<gp.hxx>
@@ -456,9 +456,9 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Quantity_Mass.hxx>
 #include<Quantity_MassFlow.hxx>
 #include<Quantity_MolarConcentration.hxx>
-#include<Quantity_Molarity.hxx>
 #include<Quantity_MolarMass.hxx>
 #include<Quantity_MolarVolume.hxx>
+#include<Quantity_Molarity.hxx>
 #include<Quantity_MomentOfAForce.hxx>
 #include<Quantity_MomentOfInertia.hxx>
 #include<Quantity_Momentum.hxx>
@@ -642,14 +642,14 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Image_Color.hxx>
 #include<Image_Diff.hxx>
 #include<Image_PixMap.hxx>
-#include<Image_PixMap_Handle.hxx>
 #include<Image_PixMapData.hxx>
+#include<Image_PixMap_Handle.hxx>
 #include<TCollection.hxx>
+#include<TCollection_AVLBaseNode.hxx>
+#include<TCollection_AVLBaseNodePtr.hxx>
 #include<TCollection_Array1Descriptor.hxx>
 #include<TCollection_Array2Descriptor.hxx>
 #include<TCollection_AsciiString.hxx>
-#include<TCollection_AVLBaseNode.hxx>
-#include<TCollection_AVLBaseNodePtr.hxx>
 #include<TCollection_BaseSequence.hxx>
 #include<TCollection_BasicMap.hxx>
 #include<TCollection_BasicMapIterator.hxx>
@@ -686,10 +686,10 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<OSD_Exception_FLT_STACK_CHECK.hxx>
 #include<OSD_Exception_FLT_UNDERFLOW.hxx>
 #include<OSD_Exception_ILLEGAL_INSTRUCTION.hxx>
-#include<OSD_Exception_IN_PAGE_ERROR.hxx>
 #include<OSD_Exception_INT_DIVIDE_BY_ZERO.hxx>
 #include<OSD_Exception_INT_OVERFLOW.hxx>
 #include<OSD_Exception_INVALID_DISPOSITION.hxx>
+#include<OSD_Exception_IN_PAGE_ERROR.hxx>
 #include<OSD_Exception_NONCONTINUABLE_EXCEPTION.hxx>
 #include<OSD_Exception_PRIV_INSTRUCTION.hxx>
 #include<OSD_Exception_STACK_OVERFLOW.hxx>
@@ -706,31 +706,31 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<OSD_MAllocHook.hxx>
 #include<OSD_MemInfo.hxx>
 #include<OSD_OEMType.hxx>
-#include<OSD_OpenMode.hxx>
 #include<OSD_OSDError.hxx>
+#include<OSD_OpenMode.hxx>
+#include<OSD_PThread.hxx>
 #include<OSD_Path.hxx>
+#include<OSD_PerfMeter.h>
 #include<OSD_PerfMeter.hxx>
 #include<OSD_Printer.hxx>
 #include<OSD_Process.hxx>
 #include<OSD_Protection.hxx>
-#include<OSD_PThread.hxx>
-#include<OSD_SharedLibrary.hxx>
 #include<OSD_SIGBUS.hxx>
 #include<OSD_SIGHUP.hxx>
 #include<OSD_SIGILL.hxx>
 #include<OSD_SIGINT.hxx>
 #include<OSD_SIGKILL.hxx>
-#include<OSD_Signal.hxx>
 #include<OSD_SIGQUIT.hxx>
 #include<OSD_SIGSEGV.hxx>
 #include<OSD_SIGSYS.hxx>
+#include<OSD_SharedLibrary.hxx>
+#include<OSD_Signal.hxx>
 #include<OSD_SingleProtection.hxx>
 #include<OSD_SysType.hxx>
 #include<OSD_Thread.hxx>
 #include<OSD_ThreadFunction.hxx>
 #include<OSD_Timer.hxx>
 #include<OSD_WhoAmI.hxx>
-#include<OSD_PerfMeter.h>
 #include<TShort_Array1OfShortReal.hxx>
 #include<TShort_Array2OfShortReal.hxx>
 #include<TShort_HArray1OfShortReal.hxx>
@@ -957,11 +957,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<TColStd_StdMapNodeOfMapOfReal.hxx>
 #include<TColStd_StdMapNodeOfMapOfTransient.hxx>
 #include<TCollection.hxx>
+#include<TCollection_AVLBaseNode.hxx>
+#include<TCollection_AVLBaseNodePtr.hxx>
 #include<TCollection_Array1Descriptor.hxx>
 #include<TCollection_Array2Descriptor.hxx>
 #include<TCollection_AsciiString.hxx>
-#include<TCollection_AVLBaseNode.hxx>
-#include<TCollection_AVLBaseNodePtr.hxx>
 #include<TCollection_BaseSequence.hxx>
 #include<TCollection_BasicMap.hxx>
 #include<TCollection_BasicMapIterator.hxx>
@@ -993,11 +993,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_Error.hxx>
 #include<Storage_HArrayOfCallBack.hxx>
 #include<Storage_HArrayOfSchema.hxx>
-#include<Storage_HeaderData.hxx>
 #include<Storage_HPArray.hxx>
 #include<Storage_HSeqOfCallBack.hxx>
 #include<Storage_HSeqOfPersistent.hxx>
 #include<Storage_HSeqOfRoot.hxx>
+#include<Storage_HeaderData.hxx>
 #include<Storage_IndexedDataMapNodeOfPType.hxx>
 #include<Storage_InternalData.hxx>
 #include<Storage_Macros.hxx>
@@ -1006,8 +1006,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_MapPSDHasher.hxx>
 #include<Storage_OpenMode.hxx>
 #include<Storage_PArray.hxx>
-#include<Storage_Position.hxx>
 #include<Storage_PType.hxx>
+#include<Storage_Position.hxx>
 #include<Storage_Root.hxx>
 #include<Storage_RootData.hxx>
 #include<Storage_Schema.hxx>
@@ -1018,7 +1018,6 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_SequenceNodeOfSeqOfPersistent.hxx>
 #include<Storage_SequenceNodeOfSeqOfRoot.hxx>
 #include<Storage_SolveMode.hxx>
-#include<Storage_stCONSTclCOM.hxx>
 #include<Storage_StreamExtCharParityError.hxx>
 #include<Storage_StreamFormatError.hxx>
 #include<Storage_StreamModeError.hxx>
@@ -1027,13 +1026,14 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_StreamWriteError.hxx>
 #include<Storage_TypeData.hxx>
 #include<Storage_TypedCallBack.hxx>
+#include<Storage_stCONSTclCOM.hxx>
 %};
 %import Aspect.i
-%import Standard.i
-%import MMgt.i
-%import gp.i
-%import Quantity.i
-%import TColStd.i
 %import Image.i
-%import TCollection.i
+%import MMgt.i
 %import OSD.i
+%import Quantity.i
+%import Standard.i
+%import TColStd.i
+%import TCollection.i
+%import gp.i

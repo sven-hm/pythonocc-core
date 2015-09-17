@@ -38,12 +38,6 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 /* end typedefs declaration */
 
 /* public enums */
-enum ShapeExtend_Parametrisation {
-	ShapeExtend_Natural = 0,
-	ShapeExtend_Uniform = 1,
-	ShapeExtend_Unitary = 2,
-};
-
 enum ShapeExtend_Status {
 	ShapeExtend_OK = 0,
 	ShapeExtend_DONE1 = 1,
@@ -64,6 +58,12 @@ enum ShapeExtend_Status {
 	ShapeExtend_FAIL7 = 16,
 	ShapeExtend_FAIL8 = 17,
 	ShapeExtend_FAIL = 18,
+};
+
+enum ShapeExtend_Parametrisation {
+	ShapeExtend_Natural = 0,
+	ShapeExtend_Uniform = 1,
+	ShapeExtend_Unitary = 2,
 };
 
 /* end public enums declaration */

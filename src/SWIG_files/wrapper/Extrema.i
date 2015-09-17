@@ -48,15 +48,15 @@ enum Extrema_ElementType {
 	Extrema_Face = 3,
 };
 
-enum Extrema_ExtAlgo {
-	Extrema_ExtAlgo_Grad = 0,
-	Extrema_ExtAlgo_Tree = 1,
-};
-
 enum Extrema_ExtFlag {
 	Extrema_ExtFlag_MIN = 0,
 	Extrema_ExtFlag_MAX = 1,
 	Extrema_ExtFlag_MINMAX = 2,
+};
+
+enum Extrema_ExtAlgo {
+	Extrema_ExtAlgo_Grad = 0,
+	Extrema_ExtAlgo_Tree = 1,
 };
 
 /* end public enums declaration */

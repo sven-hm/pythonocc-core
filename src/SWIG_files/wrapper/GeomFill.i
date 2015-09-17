@@ -38,6 +38,19 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 /* end typedefs declaration */
 
 /* public enums */
+enum GeomFill_Trihedron {
+	GeomFill_IsCorrectedFrenet = 0,
+	GeomFill_IsFixed = 1,
+	GeomFill_IsFrenet = 2,
+	GeomFill_IsConstantNormal = 3,
+	GeomFill_IsDarboux = 4,
+	GeomFill_IsGuideAC = 5,
+	GeomFill_IsGuidePlan = 6,
+	GeomFill_IsGuideACWithContact = 7,
+	GeomFill_IsGuidePlanWithContact = 8,
+	GeomFill_IsDiscreteTrihedron = 9,
+};
+
 enum GeomFill_ApproxStyle {
 	GeomFill_Section = 0,
 	GeomFill_Location = 1,
@@ -54,19 +67,6 @@ enum GeomFill_PipeError {
 	GeomFill_PipeNotOk = 1,
 	GeomFill_PlaneNotIntersectGuide = 2,
 	GeomFill_ImpossibleContact = 3,
-};
-
-enum GeomFill_Trihedron {
-	GeomFill_IsCorrectedFrenet = 0,
-	GeomFill_IsFixed = 1,
-	GeomFill_IsFrenet = 2,
-	GeomFill_IsConstantNormal = 3,
-	GeomFill_IsDarboux = 4,
-	GeomFill_IsGuideAC = 5,
-	GeomFill_IsGuidePlan = 6,
-	GeomFill_IsGuideACWithContact = 7,
-	GeomFill_IsGuidePlanWithContact = 8,
-	GeomFill_IsDiscreteTrihedron = 9,
 };
 
 /* end public enums declaration */

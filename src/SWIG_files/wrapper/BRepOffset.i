@@ -53,19 +53,19 @@ enum BRepOffset_Mode {
 	BRepOffset_RectoVerso = 2,
 };
 
-enum BRepOffset_Status {
-	BRepOffset_Good = 0,
-	BRepOffset_Reversed = 1,
-	BRepOffset_Degenerated = 2,
-	BRepOffset_Unknown = 3,
-};
-
 enum BRepOffset_Type {
 	BRepOffset_Concave = 0,
 	BRepOffset_Convex = 1,
 	BRepOffset_Tangent = 2,
 	BRepOffset_FreeBoundary = 3,
 	BRepOffset_Other = 4,
+};
+
+enum BRepOffset_Status {
+	BRepOffset_Good = 0,
+	BRepOffset_Reversed = 1,
+	BRepOffset_Degenerated = 2,
+	BRepOffset_Unknown = 3,
 };
 
 /* end public enums declaration */

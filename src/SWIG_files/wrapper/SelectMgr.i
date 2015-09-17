@@ -40,18 +40,18 @@ typedef SelectMgr_SelectableObject * SelectMgr_SOPtr;
 /* end typedefs declaration */
 
 /* public enums */
+enum SelectMgr_TypeOfUpdate {
+	SelectMgr_TOU_Full = 0,
+	SelectMgr_TOU_Partial = 1,
+	SelectMgr_TOU_None = 2,
+};
+
 enum SelectMgr_StateOfSelection {
 	SelectMgr_SOS_Activated = 0,
 	SelectMgr_SOS_Deactivated = 1,
 	SelectMgr_SOS_Sleeping = 2,
 	SelectMgr_SOS_Any = 3,
 	SelectMgr_SOS_Unknown = 4,
-};
-
-enum SelectMgr_TypeOfUpdate {
-	SelectMgr_TOU_Full = 0,
-	SelectMgr_TOU_Partial = 1,
-	SelectMgr_TOU_None = 2,
 };
 
 /* end public enums declaration */

@@ -40,43 +40,17 @@ typedef AIS_InteractiveContext * AIS_PToContext;
 /* end typedefs declaration */
 
 /* public enums */
-enum AIS_ClearMode {
-	AIS_CM_All = 0,
-	AIS_CM_Interactive = 1,
-	AIS_CM_Filters = 2,
-	AIS_CM_StandardModes = 3,
-	AIS_CM_TemporaryShapePrs = 4,
+enum AIS_SelectStatus {
+	AIS_SS_Added = 0,
+	AIS_SS_Removed = 1,
+	AIS_SS_NotDone = 2,
 };
 
-enum AIS_ConnectStatus {
-	AIS_CS_None = 0,
-	AIS_CS_Connection = 1,
-	AIS_CS_Transform = 2,
-	AIS_CS_Both = 3,
-};
-
-enum AIS_DimensionSelectionMode {
-	AIS_DSM_All = 0,
-	AIS_DSM_Line = 1,
-	AIS_DSM_Text = 2,
-};
-
-enum AIS_DisplayMode {
-	AIS_WireFrame = 0,
-	AIS_Shaded = 1,
-};
-
-enum AIS_DisplaySpecialSymbol {
-	AIS_DSS_No = 0,
-	AIS_DSS_Before = 1,
-	AIS_DSS_After = 2,
-};
-
-enum AIS_DisplayStatus {
-	AIS_DS_Displayed = 0,
-	AIS_DS_Erased = 1,
-	AIS_DS_Temporary = 2,
-	AIS_DS_None = 3,
+enum AIS_TypeOfPlane {
+	AIS_TOPL_Unknown = 0,
+	AIS_TOPL_XYPlane = 1,
+	AIS_TOPL_XZPlane = 2,
+	AIS_TOPL_YZPlane = 3,
 };
 
 enum AIS_KindOfDimension {
@@ -94,6 +68,72 @@ enum AIS_KindOfDimension {
 	AIS_KOD_CHAMF3D = 11,
 	AIS_KOD_OFFSET = 12,
 	AIS_KOD_ELLIPSERADIUS = 13,
+};
+
+enum AIS_StandardDatum {
+	AIS_SD_None = 0,
+	AIS_SD_Point = 1,
+	AIS_SD_Axis = 2,
+	AIS_SD_Trihedron = 3,
+	AIS_SD_PlaneTrihedron = 4,
+	AIS_SD_Line = 5,
+	AIS_SD_Circle = 6,
+	AIS_SD_Plane = 7,
+};
+
+enum AIS_DisplayMode {
+	AIS_WireFrame = 0,
+	AIS_Shaded = 1,
+};
+
+enum AIS_TypeOfDist {
+	AIS_TOD_Unknown = 0,
+	AIS_TOD_Horizontal = 1,
+	AIS_TOD_Vertical = 2,
+};
+
+enum AIS_StatusOfPick {
+	AIS_SOP_Error = 0,
+	AIS_SOP_NothingSelected = 1,
+	AIS_SOP_Removed = 2,
+	AIS_SOP_OneSelected = 3,
+	AIS_SOP_SeveralSelected = 4,
+};
+
+enum AIS_ConnectStatus {
+	AIS_CS_None = 0,
+	AIS_CS_Connection = 1,
+	AIS_CS_Transform = 2,
+	AIS_CS_Both = 3,
+};
+
+enum AIS_KindOfUnit {
+	AIS_TOU_LENGTH = 0,
+	AIS_TOU_SURFACE = 1,
+	AIS_TOU_VOLUME = 2,
+	AIS_TOU_PLANE_ANGLE = 3,
+	AIS_TOU_SOLID_ANGLE = 4,
+	AIS_TOU_MASS = 5,
+	AIS_TOU_FORCE = 6,
+	AIS_TOU_TIME = 7,
+};
+
+enum AIS_TypeOfAttribute {
+	AIS_TOA_Line = 0,
+	AIS_TOA_Dimension = 1,
+	AIS_TOA_Wire = 2,
+	AIS_TOA_Plane = 3,
+	AIS_TOA_Vector = 4,
+	AIS_TOA_UIso = 5,
+	AIS_TOA_VIso = 6,
+	AIS_TOA_Free = 7,
+	AIS_TOA_UnFree = 8,
+	AIS_TOA_Section = 9,
+	AIS_TOA_Hidden = 10,
+	AIS_TOA_Seen = 11,
+	AIS_TOA_FirstAxis = 12,
+	AIS_TOA_SecondAxis = 13,
+	AIS_TOA_ThirdAxis = 14,
 };
 
 enum AIS_KindOfInteractive {
@@ -116,34 +156,6 @@ enum AIS_KindOfSurface {
 	AIS_KOS_OtherSurface = 7,
 };
 
-enum AIS_KindOfUnit {
-	AIS_TOU_LENGTH = 0,
-	AIS_TOU_SURFACE = 1,
-	AIS_TOU_VOLUME = 2,
-	AIS_TOU_PLANE_ANGLE = 3,
-	AIS_TOU_SOLID_ANGLE = 4,
-	AIS_TOU_MASS = 5,
-	AIS_TOU_FORCE = 6,
-	AIS_TOU_TIME = 7,
-};
-
-enum AIS_SelectStatus {
-	AIS_SS_Added = 0,
-	AIS_SS_Removed = 1,
-	AIS_SS_NotDone = 2,
-};
-
-enum AIS_StandardDatum {
-	AIS_SD_None = 0,
-	AIS_SD_Point = 1,
-	AIS_SD_Axis = 2,
-	AIS_SD_Trihedron = 3,
-	AIS_SD_PlaneTrihedron = 4,
-	AIS_SD_Line = 5,
-	AIS_SD_Circle = 6,
-	AIS_SD_Plane = 7,
-};
-
 enum AIS_StatusOfDetection {
 	AIS_SOD_Error = 0,
 	AIS_SOD_Nothing = 1,
@@ -154,32 +166,6 @@ enum AIS_StatusOfDetection {
 	AIS_SOD_SeveralGood = 6,
 };
 
-enum AIS_StatusOfPick {
-	AIS_SOP_Error = 0,
-	AIS_SOP_NothingSelected = 1,
-	AIS_SOP_Removed = 2,
-	AIS_SOP_OneSelected = 3,
-	AIS_SOP_SeveralSelected = 4,
-};
-
-enum AIS_TypeOfAttribute {
-	AIS_TOA_Line = 0,
-	AIS_TOA_Dimension = 1,
-	AIS_TOA_Wire = 2,
-	AIS_TOA_Plane = 3,
-	AIS_TOA_Vector = 4,
-	AIS_TOA_UIso = 5,
-	AIS_TOA_VIso = 6,
-	AIS_TOA_Free = 7,
-	AIS_TOA_UnFree = 8,
-	AIS_TOA_Section = 9,
-	AIS_TOA_Hidden = 10,
-	AIS_TOA_Seen = 11,
-	AIS_TOA_FirstAxis = 12,
-	AIS_TOA_SecondAxis = 13,
-	AIS_TOA_ThirdAxis = 14,
-};
-
 enum AIS_TypeOfAxis {
 	AIS_TOAX_Unknown = 0,
 	AIS_TOAX_XAxis = 1,
@@ -187,10 +173,24 @@ enum AIS_TypeOfAxis {
 	AIS_TOAX_ZAxis = 3,
 };
 
-enum AIS_TypeOfDist {
-	AIS_TOD_Unknown = 0,
-	AIS_TOD_Horizontal = 1,
-	AIS_TOD_Vertical = 2,
+enum AIS_DisplaySpecialSymbol {
+	AIS_DSS_No = 0,
+	AIS_DSS_Before = 1,
+	AIS_DSS_After = 2,
+};
+
+enum AIS_DimensionSelectionMode {
+	AIS_DSM_All = 0,
+	AIS_DSM_Line = 1,
+	AIS_DSM_Text = 2,
+};
+
+enum AIS_ClearMode {
+	AIS_CM_All = 0,
+	AIS_CM_Interactive = 1,
+	AIS_CM_Filters = 2,
+	AIS_CM_StandardModes = 3,
+	AIS_CM_TemporaryShapePrs = 4,
 };
 
 enum AIS_TypeOfIso {
@@ -199,11 +199,11 @@ enum AIS_TypeOfIso {
 	AIS_TOI_Both = 2,
 };
 
-enum AIS_TypeOfPlane {
-	AIS_TOPL_Unknown = 0,
-	AIS_TOPL_XYPlane = 1,
-	AIS_TOPL_XZPlane = 2,
-	AIS_TOPL_YZPlane = 3,
+enum AIS_DisplayStatus {
+	AIS_DS_Displayed = 0,
+	AIS_DS_Erased = 1,
+	AIS_DS_Temporary = 2,
+	AIS_DS_None = 3,
 };
 
 /* end public enums declaration */

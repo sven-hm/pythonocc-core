@@ -38,18 +38,18 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 /* end typedefs declaration */
 
 /* public enums */
-enum Contap_IType {
-	Contap_Lin = 0,
-	Contap_Circle = 1,
-	Contap_Walking = 2,
-	Contap_Restriction = 3,
-};
-
 enum Contap_TFunction {
 	Contap_ContourStd = 0,
 	Contap_ContourPrs = 1,
 	Contap_DraftStd = 2,
 	Contap_DraftPrs = 3,
+};
+
+enum Contap_IType {
+	Contap_Lin = 0,
+	Contap_Circle = 1,
+	Contap_Walking = 2,
+	Contap_Restriction = 3,
 };
 
 /* end public enums declaration */

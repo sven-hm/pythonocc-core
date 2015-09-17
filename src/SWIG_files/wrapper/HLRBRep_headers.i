@@ -18,14 +18,15 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 
 */
 %{
+#include<HLRBRep.hxx>
 #include<HLRBRep_Algo.hxx>
 #include<HLRBRep_AreaLimit.hxx>
 #include<HLRBRep_Array1OfEData.hxx>
 #include<HLRBRep_Array1OfFData.hxx>
 #include<HLRBRep_BCurveTool.hxx>
+#include<HLRBRep_BSurfaceTool.hxx>
 #include<HLRBRep_BiPnt2D.hxx>
 #include<HLRBRep_BiPoint.hxx>
-#include<HLRBRep_BSurfaceTool.hxx>
 #include<HLRBRep_CInter.hxx>
 #include<HLRBRep_CLProps.hxx>
 #include<HLRBRep_CLPropsATool.hxx>
@@ -40,8 +41,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<HLRBRep_ExactIntersectionPointOfTheIntPCurvePCurveOfCInter.hxx>
 #include<HLRBRep_FaceData.hxx>
 #include<HLRBRep_FaceIterator.hxx>
-#include<HLRBRep_Hider.hxx>
 #include<HLRBRep_HLRToShape.hxx>
+#include<HLRBRep_Hider.hxx>
 #include<HLRBRep_IntConicCurveOfCInter.hxx>
 #include<HLRBRep_InterCSurf.hxx>
 #include<HLRBRep_InternalAlgo.hxx>
@@ -57,14 +58,14 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<HLRBRep_PCLocFOfTheLocateExtPCOfTheProjPCurOfCInter.hxx>
 #include<HLRBRep_PolyAlgo.hxx>
 #include<HLRBRep_PolyHLRToShape.hxx>
+#include<HLRBRep_SLProps.hxx>
+#include<HLRBRep_SLPropsATool.hxx>
 #include<HLRBRep_SeqOfShapeBounds.hxx>
 #include<HLRBRep_SeqPCOfPCLocFOfTheLocateExtPCOfTheProjPCurOfCInter.hxx>
 #include<HLRBRep_SequenceNodeOfSeqOfShapeBounds.hxx>
 #include<HLRBRep_SequenceNodeOfSeqPCOfPCLocFOfTheLocateExtPCOfTheProjPCurOfCInter.hxx>
 #include<HLRBRep_ShapeBounds.hxx>
 #include<HLRBRep_ShapeToHLR.hxx>
-#include<HLRBRep_SLProps.hxx>
-#include<HLRBRep_SLPropsATool.hxx>
 #include<HLRBRep_Surface.hxx>
 #include<HLRBRep_SurfaceTool.hxx>
 #include<HLRBRep_TheCSFunctionOfInterCSurf.hxx>
@@ -72,9 +73,9 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<HLRBRep_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfCInter.hxx>
 #include<HLRBRep_TheExactInterCSurf.hxx>
 #include<HLRBRep_TheIntConicCurveOfCInter.hxx>
+#include<HLRBRep_TheIntPCurvePCurveOfCInter.hxx>
 #include<HLRBRep_TheInterferenceOfInterCSurf.hxx>
 #include<HLRBRep_TheIntersectorOfTheIntConicCurveOfCInter.hxx>
-#include<HLRBRep_TheIntPCurvePCurveOfCInter.hxx>
 #include<HLRBRep_TheLocateExtPCOfTheProjPCurOfCInter.hxx>
 #include<HLRBRep_ThePolygon2dOfTheIntPCurvePCurveOfCInter.hxx>
 #include<HLRBRep_ThePolygonOfInterCSurf.hxx>
@@ -85,7 +86,6 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<HLRBRep_TheQuadCurvExactInterCSurf.hxx>
 #include<HLRBRep_TheQuadCurvFuncOfTheQuadCurvExactInterCSurf.hxx>
 #include<HLRBRep_VertexList.hxx>
-#include<HLRBRep.hxx>
 #include<Standard.hxx>
 #include<Standard_AbortiveTransaction.hxx>
 #include<Standard_Address.hxx>
@@ -94,10 +94,10 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_Atomic.hxx>
 #include<Standard_Boolean.hxx>
 #include<Standard_Byte.hxx>
-#include<Standard_Character.hxx>
 #include<Standard_CLocaleSentry.hxx>
-#include<Standard_ConstructionError.hxx>
 #include<Standard_CString.hxx>
+#include<Standard_Character.hxx>
+#include<Standard_ConstructionError.hxx>
 #include<Standard_DefineAlloc.hxx>
 #include<Standard_DefineException.hxx>
 #include<Standard_DefineHandle.hxx>
@@ -112,20 +112,19 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_Failure.hxx>
 #include<Standard_GUID.hxx>
 #include<Standard_HandlerStatus.hxx>
+#include<Standard_IStream.hxx>
 #include<Standard_ImmutableObject.hxx>
 #include<Standard_Integer.hxx>
 #include<Standard_InternalType.hxx>
-#include<Standard_IStream.hxx>
 #include<Standard_JmpBuf.hxx>
 #include<Standard_KindOfType.hxx>
 #include<Standard_LicenseError.hxx>
 #include<Standard_LicenseNotFound.hxx>
-#include<Standard_Macro.hxx>
-#include<Standard_math.hxx>
 #include<Standard_MMgrOpt.hxx>
 #include<Standard_MMgrRaw.hxx>
 #include<Standard_MMgrRoot.hxx>
 #include<Standard_MMgrTBBalloc.hxx>
+#include<Standard_Macro.hxx>
 #include<Standard_MultiplyDefined.hxx>
 #include<Standard_Mutex.hxx>
 #include<Standard_NegativeValue.hxx>
@@ -143,16 +142,16 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_PByte.hxx>
 #include<Standard_PCharacter.hxx>
 #include<Standard_PErrorHandler.hxx>
+#include<Standard_PExtCharacter.hxx>
 #include<Standard_Persistent.hxx>
 #include<Standard_Persistent_proto.hxx>
-#include<Standard_PExtCharacter.hxx>
 #include<Standard_PrimitiveTypes.hxx>
 #include<Standard_ProgramError.hxx>
 #include<Standard_RangeError.hxx>
 #include<Standard_Real.hxx>
+#include<Standard_SStream.hxx>
 #include<Standard_ShortReal.hxx>
 #include<Standard_Size.hxx>
-#include<Standard_SStream.hxx>
 #include<Standard_Storable.hxx>
 #include<Standard_Stream.hxx>
 #include<Standard_ThreadId.hxx>
@@ -163,15 +162,16 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_Type.hxx>
 #include<Standard_TypeDef.hxx>
 #include<Standard_TypeMismatch.hxx>
-#include<Standard_Underflow.hxx>
 #include<Standard_UUID.hxx>
+#include<Standard_Underflow.hxx>
 #include<Standard_Version.hxx>
 #include<Standard_WayOfLife.hxx>
+#include<Standard_math.hxx>
 #include<Standard_values.h>
 #include<TopoDS.hxx>
 #include<TopoDS_Builder.hxx>
-#include<TopoDS_Compound.hxx>
 #include<TopoDS_CompSolid.hxx>
+#include<TopoDS_Compound.hxx>
 #include<TopoDS_Edge.hxx>
 #include<TopoDS_Face.hxx>
 #include<TopoDS_FrozenShape.hxx>
@@ -183,8 +183,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<TopoDS_Shape.hxx>
 #include<TopoDS_Shell.hxx>
 #include<TopoDS_Solid.hxx>
-#include<TopoDS_TCompound.hxx>
 #include<TopoDS_TCompSolid.hxx>
+#include<TopoDS_TCompound.hxx>
 #include<TopoDS_TEdge.hxx>
 #include<TopoDS_TFace.hxx>
 #include<TopoDS_TShape.hxx>
@@ -204,8 +204,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<HLRAlgo_BiPoint.hxx>
 #include<HLRAlgo_Coincidence.hxx>
 #include<HLRAlgo_EdgeIterator.hxx>
-#include<HLRAlgo_EdgesBlock.hxx>
 #include<HLRAlgo_EdgeStatus.hxx>
+#include<HLRAlgo_EdgesBlock.hxx>
 #include<HLRAlgo_HArray1OfPHDat.hxx>
 #include<HLRAlgo_HArray1OfPINod.hxx>
 #include<HLRAlgo_HArray1OfPISeg.hxx>
@@ -440,12 +440,12 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Geom_Axis1Placement.hxx>
 #include<Geom_Axis2Placement.hxx>
 #include<Geom_AxisPlacement.hxx>
+#include<Geom_BSplineCurve.hxx>
+#include<Geom_BSplineSurface.hxx>
 #include<Geom_BezierCurve.hxx>
 #include<Geom_BezierSurface.hxx>
 #include<Geom_BoundedCurve.hxx>
 #include<Geom_BoundedSurface.hxx>
-#include<Geom_BSplineCurve.hxx>
-#include<Geom_BSplineSurface.hxx>
 #include<Geom_CartesianPoint.hxx>
 #include<Geom_Circle.hxx>
 #include<Geom_Conic.hxx>
@@ -565,9 +565,9 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<IntRes2d_Transition.hxx>
 #include<IntRes2d_TypeTrans.hxx>
 #include<Geom2d_AxisPlacement.hxx>
+#include<Geom2d_BSplineCurve.hxx>
 #include<Geom2d_BezierCurve.hxx>
 #include<Geom2d_BoundedCurve.hxx>
-#include<Geom2d_BSplineCurve.hxx>
 #include<Geom2d_CartesianPoint.hxx>
 #include<Geom2d_Circle.hxx>
 #include<Geom2d_Conic.hxx>
@@ -695,13 +695,13 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Bnd_SeqOfBox.hxx>
 #include<Bnd_SequenceNodeOfSeqOfBox.hxx>
 #include<Bnd_Sphere.hxx>
+#include<HLRTopoBRep_DSFiller.hxx>
 #include<HLRTopoBRep_Data.hxx>
 #include<HLRTopoBRep_DataMapIteratorOfDataMapOfShapeFaceData.hxx>
 #include<HLRTopoBRep_DataMapIteratorOfMapOfShapeListOfVData.hxx>
 #include<HLRTopoBRep_DataMapNodeOfDataMapOfShapeFaceData.hxx>
 #include<HLRTopoBRep_DataMapNodeOfMapOfShapeListOfVData.hxx>
 #include<HLRTopoBRep_DataMapOfShapeFaceData.hxx>
-#include<HLRTopoBRep_DSFiller.hxx>
 #include<HLRTopoBRep_FaceData.hxx>
 #include<HLRTopoBRep_FaceIsoLiner.hxx>
 #include<HLRTopoBRep_ListIteratorOfListOfVData.hxx>
@@ -711,11 +711,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<HLRTopoBRep_OutLiner.hxx>
 #include<HLRTopoBRep_VData.hxx>
 #include<TCollection.hxx>
+#include<TCollection_AVLBaseNode.hxx>
+#include<TCollection_AVLBaseNodePtr.hxx>
 #include<TCollection_Array1Descriptor.hxx>
 #include<TCollection_Array2Descriptor.hxx>
 #include<TCollection_AsciiString.hxx>
-#include<TCollection_AVLBaseNode.hxx>
-#include<TCollection_AVLBaseNodePtr.hxx>
 #include<TCollection_BaseSequence.hxx>
 #include<TCollection_BasicMap.hxx>
 #include<TCollection_BasicMapIterator.hxx>
@@ -735,8 +735,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<math_Array1OfValueAndWeight.hxx>
 #include<math_BFGS.hxx>
 #include<math_BissecNewton.hxx>
-#include<math_BracketedRoot.hxx>
 #include<math_BracketMinimum.hxx>
+#include<math_BracketedRoot.hxx>
 #include<math_BrentMinimum.hxx>
 #include<math_CompareOfValueAndWeight.hxx>
 #include<math_ComputeGaussPointsAndWeights.hxx>
@@ -779,11 +779,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<math_QuickSortOfValueAndWeight.hxx>
 #include<math_RealRandom.hxx>
 #include<math_Recipes.hxx>
+#include<math_SVD.hxx>
 #include<math_SingleTabOfInteger.hxx>
 #include<math_SingleTabOfReal.hxx>
 #include<math_SingularMatrix.hxx>
 #include<math_Status.hxx>
-#include<math_SVD.hxx>
 #include<math_TrigonometricFunctionRoots.hxx>
 #include<math_Uzawa.hxx>
 #include<math_ValueAndWeight.hxx>
@@ -804,27 +804,27 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Extrema_Array2OfPOnCurv2d.hxx>
 #include<Extrema_Array2OfPOnSurf.hxx>
 #include<Extrema_Array2OfPOnSurfParams.hxx>
-#include<Extrema_CCache2dOfExtCC2d.hxx>
-#include<Extrema_CCacheOfExtCC.hxx>
 #include<Extrema_CCFOfECC2dOfExtCC2d.hxx>
 #include<Extrema_CCFOfECCOfExtCC.hxx>
 #include<Extrema_CCFOfELCC2dOfLocateExtCC2d.hxx>
 #include<Extrema_CCFOfELCCOfLocateExtCC.hxx>
 #include<Extrema_CCLocFOfLocECC2dOfLocateExtCC2d.hxx>
 #include<Extrema_CCLocFOfLocECCOfLocateExtCC.hxx>
+#include<Extrema_CCache2dOfExtCC2d.hxx>
+#include<Extrema_CCacheOfExtCC.hxx>
 #include<Extrema_Curve2dTool.hxx>
 #include<Extrema_CurveTool.hxx>
 #include<Extrema_ECC2dOfExtCC2d.hxx>
 #include<Extrema_ECCOfExtCC.hxx>
 #include<Extrema_ELCC2dOfLocateExtCC2d.hxx>
 #include<Extrema_ELCCOfLocateExtCC.hxx>
-#include<Extrema_ElementType.hxx>
 #include<Extrema_ELPCOfLocateExtPC.hxx>
 #include<Extrema_ELPCOfLocateExtPC2d.hxx>
 #include<Extrema_EPCOfELPCOfLocateExtPC.hxx>
 #include<Extrema_EPCOfELPCOfLocateExtPC2d.hxx>
 #include<Extrema_EPCOfExtPC.hxx>
 #include<Extrema_EPCOfExtPC2d.hxx>
+#include<Extrema_ElementType.hxx>
 #include<Extrema_ExtAlgo.hxx>
 #include<Extrema_ExtCC.hxx>
 #include<Extrema_ExtCC2d.hxx>
@@ -862,14 +862,14 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Extrema_HUBTreeOfSphere.hxx>
 #include<Extrema_LCCache2dOfLocateExtCC2d.hxx>
 #include<Extrema_LCCacheOfLocateExtCC.hxx>
-#include<Extrema_LocateExtCC.hxx>
-#include<Extrema_LocateExtCC2d.hxx>
-#include<Extrema_LocateExtPC.hxx>
-#include<Extrema_LocateExtPC2d.hxx>
 #include<Extrema_LocECC2dOfLocateExtCC2d.hxx>
 #include<Extrema_LocECCOfLocateExtCC.hxx>
 #include<Extrema_LocEPCOfLocateExtPC.hxx>
 #include<Extrema_LocEPCOfLocateExtPC2d.hxx>
+#include<Extrema_LocateExtCC.hxx>
+#include<Extrema_LocateExtCC2d.hxx>
+#include<Extrema_LocateExtPC.hxx>
+#include<Extrema_LocateExtPC2d.hxx>
 #include<Extrema_PCFOfEPCOfELPCOfLocateExtPC.hxx>
 #include<Extrema_PCFOfEPCOfELPCOfLocateExtPC2d.hxx>
 #include<Extrema_PCFOfEPCOfExtPC.hxx>
@@ -1009,8 +1009,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Contap_TFunction.hxx>
 #include<Contap_TheArcFunctionOfContour.hxx>
 #include<Contap_TheHSequenceOfPointOfContour.hxx>
-#include<Contap_TheIWalkingOfContour.hxx>
 #include<Contap_TheIWLineOfTheIWalkingOfContour.hxx>
+#include<Contap_TheIWalkingOfContour.hxx>
 #include<Contap_TheLineOfContour.hxx>
 #include<Contap_ThePathPointOfTheSearchOfContour.hxx>
 #include<Contap_ThePointOfContour.hxx>
@@ -1259,11 +1259,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<TColStd_StdMapNodeOfMapOfReal.hxx>
 #include<TColStd_StdMapNodeOfMapOfTransient.hxx>
 #include<TCollection.hxx>
+#include<TCollection_AVLBaseNode.hxx>
+#include<TCollection_AVLBaseNodePtr.hxx>
 #include<TCollection_Array1Descriptor.hxx>
 #include<TCollection_Array2Descriptor.hxx>
 #include<TCollection_AsciiString.hxx>
-#include<TCollection_AVLBaseNode.hxx>
-#include<TCollection_AVLBaseNodePtr.hxx>
 #include<TCollection_BaseSequence.hxx>
 #include<TCollection_BasicMap.hxx>
 #include<TCollection_BasicMapIterator.hxx>
@@ -1295,11 +1295,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_Error.hxx>
 #include<Storage_HArrayOfCallBack.hxx>
 #include<Storage_HArrayOfSchema.hxx>
-#include<Storage_HeaderData.hxx>
 #include<Storage_HPArray.hxx>
 #include<Storage_HSeqOfCallBack.hxx>
 #include<Storage_HSeqOfPersistent.hxx>
 #include<Storage_HSeqOfRoot.hxx>
+#include<Storage_HeaderData.hxx>
 #include<Storage_IndexedDataMapNodeOfPType.hxx>
 #include<Storage_InternalData.hxx>
 #include<Storage_Macros.hxx>
@@ -1308,8 +1308,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_MapPSDHasher.hxx>
 #include<Storage_OpenMode.hxx>
 #include<Storage_PArray.hxx>
-#include<Storage_Position.hxx>
 #include<Storage_PType.hxx>
+#include<Storage_Position.hxx>
 #include<Storage_Root.hxx>
 #include<Storage_RootData.hxx>
 #include<Storage_Schema.hxx>
@@ -1320,7 +1320,6 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_SequenceNodeOfSeqOfPersistent.hxx>
 #include<Storage_SequenceNodeOfSeqOfRoot.hxx>
 #include<Storage_SolveMode.hxx>
-#include<Storage_stCONSTclCOM.hxx>
 #include<Storage_StreamExtCharParityError.hxx>
 #include<Storage_StreamFormatError.hxx>
 #include<Storage_StreamModeError.hxx>
@@ -1329,29 +1328,30 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_StreamWriteError.hxx>
 #include<Storage_TypeData.hxx>
 #include<Storage_TypedCallBack.hxx>
+#include<Storage_stCONSTclCOM.hxx>
 %};
-%import Standard.i
-%import TopoDS.i
-%import MMgt.i
-%import HLRAlgo.i
-%import TopAbs.i
-%import BRepAdaptor.i
-%import GeomAbs.i
-%import TColStd.i
-%import gp.i
-%import Geom.i
-%import TColgp.i
-%import IntRes2d.i
-%import Geom2d.i
-%import TopTools.i
-%import BRepTopAdaptor.i
-%import IntCurveSurface.i
-%import Bnd.i
-%import HLRTopoBRep.i
-%import TCollection.i
-%import math.i
-%import IntCurve.i
-%import Extrema.i
 %import Adaptor3d.i
-%import Intf.i
+%import BRepAdaptor.i
+%import BRepTopAdaptor.i
+%import Bnd.i
+%import Extrema.i
+%import Geom.i
+%import Geom2d.i
+%import GeomAbs.i
+%import HLRAlgo.i
+%import HLRTopoBRep.i
+%import IntCurve.i
+%import IntCurveSurface.i
+%import IntRes2d.i
 %import IntSurf.i
+%import Intf.i
+%import MMgt.i
+%import Standard.i
+%import TColStd.i
+%import TColgp.i
+%import TCollection.i
+%import TopAbs.i
+%import TopTools.i
+%import TopoDS.i
+%import gp.i
+%import math.i

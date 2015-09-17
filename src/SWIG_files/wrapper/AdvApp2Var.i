@@ -38,14 +38,14 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 /* end typedefs declaration */
 
 /* public enums */
-enum AdvApp2Var_CriterionRepartition {
-	AdvApp2Var_Regular = 0,
-	AdvApp2Var_Incremental = 1,
-};
-
 enum AdvApp2Var_CriterionType {
 	AdvApp2Var_Absolute = 0,
 	AdvApp2Var_Relative = 1,
+};
+
+enum AdvApp2Var_CriterionRepartition {
+	AdvApp2Var_Regular = 0,
+	AdvApp2Var_Incremental = 1,
 };
 
 /* end public enums declaration */

@@ -38,26 +38,24 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 typedef NCollection_Vector <BRepMesh_Vertex> BRepMesh_VectorOfVertex;
 typedef NCollection_DataMap <Standard_Integer , Standard_Integer> BRepMesh_MapOfIntegerInteger;
 typedef Standard_Integer ( * BRepMesh_PluginEntryType ) ( const TopoDS_Shape & theShape , const Standard_Real theDeflection , const Standard_Real theAngle , BRepMesh_DiscretRoot * & theMeshAlgoInstance );
-typedef Handle_NCollection_IncAllocator BRepMesh_BaseAllocator;
-typedef NCollection_Handle <BRepMesh_Classifier> BRepMesh_ClassifierPtr;
-typedef NCollection_CellFilter <BRepMesh_CircleInspector> BRepMesh_CellFilter;
-typedef NCollection_Map <Standard_Integer> BRepMesh_MapOfInteger;
-typedef NCollection_Vector <BRepMesh_Circ> CircVector;
 typedef NCollection_Handle <BRepMesh_MapOfInteger> Handle_BRepMesh_MapOfInteger;
+typedef NCollection_Handle <BRepMesh_Classifier> BRepMesh_ClassifierPtr;
+typedef NCollection_Vector <BRepMesh_Circ> CircVector;
+typedef NCollection_Map <Standard_Integer> BRepMesh_MapOfInteger;
+typedef NCollection_CellFilter <BRepMesh_CircleInspector> BRepMesh_CellFilter;
+typedef Handle_NCollection_IncAllocator BRepMesh_BaseAllocator;
 typedef BRepMesh_DiscretRoot * BRepMesh_PDiscretRoot;
 typedef NCollection_CellFilter <BRepMesh_VertexInspector> BRepMesh_VertexCellFilter;
 typedef NCollection_List <Standard_Integer> BRepMesh_ListOfInteger;
 /* end typedefs declaration */
 
 /* public enums */
-enum BRepMesh_DegreeOfFreedom {
-	BRepMesh_Free = 0,
-	BRepMesh_InVolume = 1,
-	BRepMesh_OnSurface = 2,
-	BRepMesh_OnCurve = 3,
-	BRepMesh_Fixed = 4,
-	BRepMesh_Frontier = 5,
-	BRepMesh_Deleted = 6,
+enum BRepMesh_Status {
+	BRepMesh_NoError = 0,
+	BRepMesh_OpenWire = 1,
+	BRepMesh_SelfIntersectingWire = 2,
+	BRepMesh_Failure = 4,
+	BRepMesh_ReMesh = 8,
 };
 
 enum BRepMesh_FactoryError {
@@ -67,12 +65,14 @@ enum BRepMesh_FactoryError {
 	BRepMesh_FE_CANNOTCREATEALGO = 3,
 };
 
-enum BRepMesh_Status {
-	BRepMesh_NoError = 0,
-	BRepMesh_OpenWire = 1,
-	BRepMesh_SelfIntersectingWire = 2,
-	BRepMesh_Failure = 4,
-	BRepMesh_ReMesh = 8,
+enum BRepMesh_DegreeOfFreedom {
+	BRepMesh_Free = 0,
+	BRepMesh_InVolume = 1,
+	BRepMesh_OnSurface = 2,
+	BRepMesh_OnCurve = 3,
+	BRepMesh_Fixed = 4,
+	BRepMesh_Frontier = 5,
+	BRepMesh_Deleted = 6,
 };
 
 /* end public enums declaration */

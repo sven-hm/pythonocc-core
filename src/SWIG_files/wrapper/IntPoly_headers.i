@@ -390,11 +390,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<TColStd_StdMapNodeOfMapOfReal.hxx>
 #include<TColStd_StdMapNodeOfMapOfTransient.hxx>
 #include<TCollection.hxx>
+#include<TCollection_AVLBaseNode.hxx>
+#include<TCollection_AVLBaseNodePtr.hxx>
 #include<TCollection_Array1Descriptor.hxx>
 #include<TCollection_Array2Descriptor.hxx>
 #include<TCollection_AsciiString.hxx>
-#include<TCollection_AVLBaseNode.hxx>
-#include<TCollection_AVLBaseNodePtr.hxx>
 #include<TCollection_BaseSequence.hxx>
 #include<TCollection_BasicMap.hxx>
 #include<TCollection_BasicMapIterator.hxx>
@@ -426,11 +426,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_Error.hxx>
 #include<Storage_HArrayOfCallBack.hxx>
 #include<Storage_HArrayOfSchema.hxx>
-#include<Storage_HeaderData.hxx>
 #include<Storage_HPArray.hxx>
 #include<Storage_HSeqOfCallBack.hxx>
 #include<Storage_HSeqOfPersistent.hxx>
 #include<Storage_HSeqOfRoot.hxx>
+#include<Storage_HeaderData.hxx>
 #include<Storage_IndexedDataMapNodeOfPType.hxx>
 #include<Storage_InternalData.hxx>
 #include<Storage_Macros.hxx>
@@ -439,8 +439,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_MapPSDHasher.hxx>
 #include<Storage_OpenMode.hxx>
 #include<Storage_PArray.hxx>
-#include<Storage_Position.hxx>
 #include<Storage_PType.hxx>
+#include<Storage_Position.hxx>
 #include<Storage_Root.hxx>
 #include<Storage_RootData.hxx>
 #include<Storage_Schema.hxx>
@@ -451,7 +451,6 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_SequenceNodeOfSeqOfPersistent.hxx>
 #include<Storage_SequenceNodeOfSeqOfRoot.hxx>
 #include<Storage_SolveMode.hxx>
-#include<Storage_stCONSTclCOM.hxx>
 #include<Storage_StreamExtCharParityError.hxx>
 #include<Storage_StreamFormatError.hxx>
 #include<Storage_StreamModeError.hxx>
@@ -460,4 +459,5 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_StreamWriteError.hxx>
 #include<Storage_TypeData.hxx>
 #include<Storage_TypedCallBack.hxx>
+#include<Storage_stCONSTclCOM.hxx>
 %};

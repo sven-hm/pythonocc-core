@@ -18,15 +18,15 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 
 */
 %{
+#include<Geom2dConvert.hxx>
 #include<Geom2dConvert_ApproxCurve.hxx>
 #include<Geom2dConvert_BSplineCurveKnotSplitting.hxx>
 #include<Geom2dConvert_BSplineCurveToBezierCurve.hxx>
 #include<Geom2dConvert_CompCurveToBSplineCurve.hxx>
-#include<Geom2dConvert.hxx>
 #include<Geom2d_AxisPlacement.hxx>
+#include<Geom2d_BSplineCurve.hxx>
 #include<Geom2d_BezierCurve.hxx>
 #include<Geom2d_BoundedCurve.hxx>
-#include<Geom2d_BSplineCurve.hxx>
 #include<Geom2d_CartesianPoint.hxx>
 #include<Geom2d_Circle.hxx>
 #include<Geom2d_Conic.hxx>
@@ -53,10 +53,10 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_Atomic.hxx>
 #include<Standard_Boolean.hxx>
 #include<Standard_Byte.hxx>
-#include<Standard_Character.hxx>
 #include<Standard_CLocaleSentry.hxx>
-#include<Standard_ConstructionError.hxx>
 #include<Standard_CString.hxx>
+#include<Standard_Character.hxx>
+#include<Standard_ConstructionError.hxx>
 #include<Standard_DefineAlloc.hxx>
 #include<Standard_DefineException.hxx>
 #include<Standard_DefineHandle.hxx>
@@ -71,20 +71,19 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_Failure.hxx>
 #include<Standard_GUID.hxx>
 #include<Standard_HandlerStatus.hxx>
+#include<Standard_IStream.hxx>
 #include<Standard_ImmutableObject.hxx>
 #include<Standard_Integer.hxx>
 #include<Standard_InternalType.hxx>
-#include<Standard_IStream.hxx>
 #include<Standard_JmpBuf.hxx>
 #include<Standard_KindOfType.hxx>
 #include<Standard_LicenseError.hxx>
 #include<Standard_LicenseNotFound.hxx>
-#include<Standard_Macro.hxx>
-#include<Standard_math.hxx>
 #include<Standard_MMgrOpt.hxx>
 #include<Standard_MMgrRaw.hxx>
 #include<Standard_MMgrRoot.hxx>
 #include<Standard_MMgrTBBalloc.hxx>
+#include<Standard_Macro.hxx>
 #include<Standard_MultiplyDefined.hxx>
 #include<Standard_Mutex.hxx>
 #include<Standard_NegativeValue.hxx>
@@ -102,16 +101,16 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_PByte.hxx>
 #include<Standard_PCharacter.hxx>
 #include<Standard_PErrorHandler.hxx>
+#include<Standard_PExtCharacter.hxx>
 #include<Standard_Persistent.hxx>
 #include<Standard_Persistent_proto.hxx>
-#include<Standard_PExtCharacter.hxx>
 #include<Standard_PrimitiveTypes.hxx>
 #include<Standard_ProgramError.hxx>
 #include<Standard_RangeError.hxx>
 #include<Standard_Real.hxx>
+#include<Standard_SStream.hxx>
 #include<Standard_ShortReal.hxx>
 #include<Standard_Size.hxx>
-#include<Standard_SStream.hxx>
 #include<Standard_Storable.hxx>
 #include<Standard_Stream.hxx>
 #include<Standard_ThreadId.hxx>
@@ -122,10 +121,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_Type.hxx>
 #include<Standard_TypeDef.hxx>
 #include<Standard_TypeMismatch.hxx>
-#include<Standard_Underflow.hxx>
 #include<Standard_UUID.hxx>
+#include<Standard_Underflow.hxx>
 #include<Standard_Version.hxx>
 #include<Standard_WayOfLife.hxx>
+#include<Standard_math.hxx>
 #include<Standard_values.h>
 #include<Convert_CircleToBSplineCurve.hxx>
 #include<Convert_CompBezierCurves2dToBSplineCurve2d.hxx>
@@ -147,14 +147,14 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Convert_SequenceOfArray1OfPoles2d.hxx>
 #include<Convert_SphereToBSplineSurface.hxx>
 #include<Convert_TorusToBSplineSurface.hxx>
+#include<TColGeom2d_Array1OfBSplineCurve.hxx>
 #include<TColGeom2d_Array1OfBezierCurve.hxx>
 #include<TColGeom2d_Array1OfBoundedCurve.hxx>
-#include<TColGeom2d_Array1OfBSplineCurve.hxx>
 #include<TColGeom2d_Array1OfCurve.hxx>
 #include<TColGeom2d_Array1OfGeometry.hxx>
+#include<TColGeom2d_HArray1OfBSplineCurve.hxx>
 #include<TColGeom2d_HArray1OfBezierCurve.hxx>
 #include<TColGeom2d_HArray1OfBoundedCurve.hxx>
-#include<TColGeom2d_HArray1OfBSplineCurve.hxx>
 #include<TColGeom2d_HArray1OfCurve.hxx>
 #include<TColGeom2d_HArray1OfGeometry.hxx>
 #include<TColGeom2d_HSequenceOfBoundedCurve.hxx>
@@ -535,11 +535,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<TColStd_StdMapNodeOfMapOfReal.hxx>
 #include<TColStd_StdMapNodeOfMapOfTransient.hxx>
 #include<TCollection.hxx>
+#include<TCollection_AVLBaseNode.hxx>
+#include<TCollection_AVLBaseNodePtr.hxx>
 #include<TCollection_Array1Descriptor.hxx>
 #include<TCollection_Array2Descriptor.hxx>
 #include<TCollection_AsciiString.hxx>
-#include<TCollection_AVLBaseNode.hxx>
-#include<TCollection_AVLBaseNodePtr.hxx>
 #include<TCollection_BaseSequence.hxx>
 #include<TCollection_BasicMap.hxx>
 #include<TCollection_BasicMapIterator.hxx>
@@ -571,11 +571,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_Error.hxx>
 #include<Storage_HArrayOfCallBack.hxx>
 #include<Storage_HArrayOfSchema.hxx>
-#include<Storage_HeaderData.hxx>
 #include<Storage_HPArray.hxx>
 #include<Storage_HSeqOfCallBack.hxx>
 #include<Storage_HSeqOfPersistent.hxx>
 #include<Storage_HSeqOfRoot.hxx>
+#include<Storage_HeaderData.hxx>
 #include<Storage_IndexedDataMapNodeOfPType.hxx>
 #include<Storage_InternalData.hxx>
 #include<Storage_Macros.hxx>
@@ -584,8 +584,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_MapPSDHasher.hxx>
 #include<Storage_OpenMode.hxx>
 #include<Storage_PArray.hxx>
-#include<Storage_Position.hxx>
 #include<Storage_PType.hxx>
+#include<Storage_Position.hxx>
 #include<Storage_Root.hxx>
 #include<Storage_RootData.hxx>
 #include<Storage_Schema.hxx>
@@ -596,7 +596,6 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_SequenceNodeOfSeqOfPersistent.hxx>
 #include<Storage_SequenceNodeOfSeqOfRoot.hxx>
 #include<Storage_SolveMode.hxx>
-#include<Storage_stCONSTclCOM.hxx>
 #include<Storage_StreamExtCharParityError.hxx>
 #include<Storage_StreamFormatError.hxx>
 #include<Storage_StreamModeError.hxx>
@@ -605,10 +604,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_StreamWriteError.hxx>
 #include<Storage_TypeData.hxx>
 #include<Storage_TypedCallBack.hxx>
+#include<Storage_stCONSTclCOM.hxx>
 %};
-%import Geom2d.i
-%import Standard.i
 %import Convert.i
+%import Geom2d.i
+%import GeomAbs.i
+%import Standard.i
 %import TColGeom2d.i
 %import TColStd.i
-%import GeomAbs.i

@@ -32,10 +32,10 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_Atomic.hxx>
 #include<Standard_Boolean.hxx>
 #include<Standard_Byte.hxx>
-#include<Standard_Character.hxx>
 #include<Standard_CLocaleSentry.hxx>
-#include<Standard_ConstructionError.hxx>
 #include<Standard_CString.hxx>
+#include<Standard_Character.hxx>
+#include<Standard_ConstructionError.hxx>
 #include<Standard_DefineAlloc.hxx>
 #include<Standard_DefineException.hxx>
 #include<Standard_DefineHandle.hxx>
@@ -50,20 +50,19 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_Failure.hxx>
 #include<Standard_GUID.hxx>
 #include<Standard_HandlerStatus.hxx>
+#include<Standard_IStream.hxx>
 #include<Standard_ImmutableObject.hxx>
 #include<Standard_Integer.hxx>
 #include<Standard_InternalType.hxx>
-#include<Standard_IStream.hxx>
 #include<Standard_JmpBuf.hxx>
 #include<Standard_KindOfType.hxx>
 #include<Standard_LicenseError.hxx>
 #include<Standard_LicenseNotFound.hxx>
-#include<Standard_Macro.hxx>
-#include<Standard_math.hxx>
 #include<Standard_MMgrOpt.hxx>
 #include<Standard_MMgrRaw.hxx>
 #include<Standard_MMgrRoot.hxx>
 #include<Standard_MMgrTBBalloc.hxx>
+#include<Standard_Macro.hxx>
 #include<Standard_MultiplyDefined.hxx>
 #include<Standard_Mutex.hxx>
 #include<Standard_NegativeValue.hxx>
@@ -81,16 +80,16 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_PByte.hxx>
 #include<Standard_PCharacter.hxx>
 #include<Standard_PErrorHandler.hxx>
+#include<Standard_PExtCharacter.hxx>
 #include<Standard_Persistent.hxx>
 #include<Standard_Persistent_proto.hxx>
-#include<Standard_PExtCharacter.hxx>
 #include<Standard_PrimitiveTypes.hxx>
 #include<Standard_ProgramError.hxx>
 #include<Standard_RangeError.hxx>
 #include<Standard_Real.hxx>
+#include<Standard_SStream.hxx>
 #include<Standard_ShortReal.hxx>
 #include<Standard_Size.hxx>
-#include<Standard_SStream.hxx>
 #include<Standard_Storable.hxx>
 #include<Standard_Stream.hxx>
 #include<Standard_ThreadId.hxx>
@@ -101,10 +100,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_Type.hxx>
 #include<Standard_TypeDef.hxx>
 #include<Standard_TypeMismatch.hxx>
-#include<Standard_Underflow.hxx>
 #include<Standard_UUID.hxx>
+#include<Standard_Underflow.hxx>
 #include<Standard_Version.hxx>
 #include<Standard_WayOfLife.hxx>
+#include<Standard_math.hxx>
 #include<Standard_values.h>
 #include<gp.hxx>
 #include<gp_Ax1.hxx>
@@ -214,8 +214,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<TopTools_StdMapNodeOfMapOfShape.hxx>
 #include<TopoDS.hxx>
 #include<TopoDS_Builder.hxx>
-#include<TopoDS_Compound.hxx>
 #include<TopoDS_CompSolid.hxx>
+#include<TopoDS_Compound.hxx>
 #include<TopoDS_Edge.hxx>
 #include<TopoDS_Face.hxx>
 #include<TopoDS_FrozenShape.hxx>
@@ -227,8 +227,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<TopoDS_Shape.hxx>
 #include<TopoDS_Shell.hxx>
 #include<TopoDS_Solid.hxx>
-#include<TopoDS_TCompound.hxx>
 #include<TopoDS_TCompSolid.hxx>
+#include<TopoDS_TCompound.hxx>
 #include<TopoDS_TEdge.hxx>
 #include<TopoDS_TFace.hxx>
 #include<TopoDS_TShape.hxx>
@@ -275,27 +275,27 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Interface_FileReaderData.hxx>
 #include<Interface_FileReaderTool.hxx>
 #include<Interface_FloatWriter.hxx>
+#include<Interface_GTool.hxx>
 #include<Interface_GeneralLib.hxx>
 #include<Interface_GeneralModule.hxx>
 #include<Interface_GlobalNodeOfGeneralLib.hxx>
 #include<Interface_GlobalNodeOfReaderLib.hxx>
 #include<Interface_Graph.hxx>
 #include<Interface_GraphContent.hxx>
-#include<Interface_GTool.hxx>
 #include<Interface_HArray1OfHAsciiString.hxx>
 #include<Interface_HGraph.hxx>
 #include<Interface_HSequenceOfCheck.hxx>
 #include<Interface_IndexedMapNodeOfIndexedMapOfAsciiString.hxx>
 #include<Interface_IndexedMapOfAsciiString.hxx>
+#include<Interface_IntList.hxx>
+#include<Interface_IntVal.hxx>
 #include<Interface_InterfaceError.hxx>
 #include<Interface_InterfaceMismatch.hxx>
 #include<Interface_InterfaceModel.hxx>
-#include<Interface_IntList.hxx>
-#include<Interface_IntVal.hxx>
 #include<Interface_LineBuffer.hxx>
+#include<Interface_MSG.hxx>
 #include<Interface_Macros.hxx>
 #include<Interface_MapAsciiStringHasher.hxx>
-#include<Interface_MSG.hxx>
 #include<Interface_NodeOfGeneralLib.hxx>
 #include<Interface_NodeOfReaderLib.hxx>
 #include<Interface_ParamList.hxx>
@@ -312,8 +312,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Interface_SignLabel.hxx>
 #include<Interface_SignType.hxx>
 #include<Interface_Static.hxx>
-#include<Interface_Statics.hxx>
 #include<Interface_StaticSatisfies.hxx>
+#include<Interface_Statics.hxx>
 #include<Interface_Translates.hxx>
 #include<Interface_TypedValue.hxx>
 #include<Interface_UndefinedContent.hxx>
@@ -329,15 +329,15 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<IFSelect_CheckCounter.hxx>
 #include<IFSelect_ContextModif.hxx>
 #include<IFSelect_ContextWrite.hxx>
-#include<IFSelect_Dispatch.hxx>
 #include<IFSelect_DispGlobal.hxx>
 #include<IFSelect_DispPerCount.hxx>
 #include<IFSelect_DispPerFiles.hxx>
 #include<IFSelect_DispPerOne.hxx>
 #include<IFSelect_DispPerSignature.hxx>
+#include<IFSelect_Dispatch.hxx>
 #include<IFSelect_EditForm.hxx>
-#include<IFSelect_Editor.hxx>
 #include<IFSelect_EditValue.hxx>
+#include<IFSelect_Editor.hxx>
 #include<IFSelect_Functions.hxx>
 #include<IFSelect_GeneralModifier.hxx>
 #include<IFSelect_GraphCounter.hxx>
@@ -346,8 +346,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<IFSelect_ListEditor.hxx>
 #include<IFSelect_ModelCopier.hxx>
 #include<IFSelect_ModifEditForm.hxx>
-#include<IFSelect_Modifier.hxx>
 #include<IFSelect_ModifReorder.hxx>
+#include<IFSelect_Modifier.hxx>
 #include<IFSelect_Option.hxx>
 #include<IFSelect_PacketList.hxx>
 #include<IFSelect_ParamEditor.hxx>
@@ -368,11 +368,9 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<IFSelect_SelectExplore.hxx>
 #include<IFSelect_SelectExtract.hxx>
 #include<IFSelect_SelectFlag.hxx>
-#include<IFSelect_SelectIncorrectEntities.hxx>
 #include<IFSelect_SelectInList.hxx>
+#include<IFSelect_SelectIncorrectEntities.hxx>
 #include<IFSelect_SelectIntersection.hxx>
-#include<IFSelect_Selection.hxx>
-#include<IFSelect_SelectionIterator.hxx>
 #include<IFSelect_SelectModelEntities.hxx>
 #include<IFSelect_SelectModelRoots.hxx>
 #include<IFSelect_SelectPointed.hxx>
@@ -389,6 +387,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<IFSelect_SelectType.hxx>
 #include<IFSelect_SelectUnion.hxx>
 #include<IFSelect_SelectUnknownEntities.hxx>
+#include<IFSelect_Selection.hxx>
+#include<IFSelect_SelectionIterator.hxx>
 #include<IFSelect_SequenceNodeOfSequenceOfAppliedModifiers.hxx>
 #include<IFSelect_SequenceNodeOfSequenceOfGeneralModifier.hxx>
 #include<IFSelect_SequenceNodeOfSequenceOfInterfaceModel.hxx>
@@ -403,17 +403,17 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<IFSelect_ShareOut.hxx>
 #include<IFSelect_ShareOutResult.hxx>
 #include<IFSelect_SignAncestor.hxx>
-#include<IFSelect_Signature.hxx>
-#include<IFSelect_SignatureList.hxx>
 #include<IFSelect_SignCategory.hxx>
 #include<IFSelect_SignCounter.hxx>
 #include<IFSelect_SignMultiple.hxx>
 #include<IFSelect_SignType.hxx>
 #include<IFSelect_SignValidity.hxx>
-#include<IFSelect_Transformer.hxx>
-#include<IFSelect_TransformStandard.hxx>
+#include<IFSelect_Signature.hxx>
+#include<IFSelect_SignatureList.hxx>
 #include<IFSelect_TSeqOfDispatch.hxx>
 #include<IFSelect_TSeqOfSelection.hxx>
+#include<IFSelect_TransformStandard.hxx>
+#include<IFSelect_Transformer.hxx>
 #include<IFSelect_WorkLibrary.hxx>
 #include<IFSelect_WorkSession.hxx>
 #include<TColStd_Array1OfAsciiString.hxx>
@@ -816,11 +816,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<TColStd_StdMapNodeOfMapOfReal.hxx>
 #include<TColStd_StdMapNodeOfMapOfTransient.hxx>
 #include<TCollection.hxx>
+#include<TCollection_AVLBaseNode.hxx>
+#include<TCollection_AVLBaseNodePtr.hxx>
 #include<TCollection_Array1Descriptor.hxx>
 #include<TCollection_Array2Descriptor.hxx>
 #include<TCollection_AsciiString.hxx>
-#include<TCollection_AVLBaseNode.hxx>
-#include<TCollection_AVLBaseNodePtr.hxx>
 #include<TCollection_BaseSequence.hxx>
 #include<TCollection_BasicMap.hxx>
 #include<TCollection_BasicMapIterator.hxx>
@@ -852,11 +852,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_Error.hxx>
 #include<Storage_HArrayOfCallBack.hxx>
 #include<Storage_HArrayOfSchema.hxx>
-#include<Storage_HeaderData.hxx>
 #include<Storage_HPArray.hxx>
 #include<Storage_HSeqOfCallBack.hxx>
 #include<Storage_HSeqOfPersistent.hxx>
 #include<Storage_HSeqOfRoot.hxx>
+#include<Storage_HeaderData.hxx>
 #include<Storage_IndexedDataMapNodeOfPType.hxx>
 #include<Storage_InternalData.hxx>
 #include<Storage_Macros.hxx>
@@ -865,8 +865,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_MapPSDHasher.hxx>
 #include<Storage_OpenMode.hxx>
 #include<Storage_PArray.hxx>
-#include<Storage_Position.hxx>
 #include<Storage_PType.hxx>
+#include<Storage_Position.hxx>
 #include<Storage_Root.hxx>
 #include<Storage_RootData.hxx>
 #include<Storage_Schema.hxx>
@@ -877,7 +877,6 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_SequenceNodeOfSeqOfPersistent.hxx>
 #include<Storage_SequenceNodeOfSeqOfRoot.hxx>
 #include<Storage_SolveMode.hxx>
-#include<Storage_stCONSTclCOM.hxx>
 #include<Storage_StreamExtCharParityError.hxx>
 #include<Storage_StreamFormatError.hxx>
 #include<Storage_StreamModeError.hxx>
@@ -886,12 +885,13 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_StreamWriteError.hxx>
 #include<Storage_TypeData.hxx>
 #include<Storage_TypedCallBack.hxx>
+#include<Storage_stCONSTclCOM.hxx>
 %};
+%import IFSelect.i
+%import Interface.i
 %import Standard.i
-%import gp.i
+%import TColStd.i
 %import TopTools.i
 %import TopoDS.i
 %import XSControl.i
-%import Interface.i
-%import IFSelect.i
-%import TColStd.i
+%import gp.i

@@ -44,17 +44,17 @@ enum IntRes2d_Position {
 	IntRes2d_End = 2,
 };
 
-enum IntRes2d_Situation {
-	IntRes2d_Inside = 0,
-	IntRes2d_Outside = 1,
-	IntRes2d_Unknown = 2,
-};
-
 enum IntRes2d_TypeTrans {
 	IntRes2d_In = 0,
 	IntRes2d_Out = 1,
 	IntRes2d_Touch = 2,
 	IntRes2d_Undecided = 3,
+};
+
+enum IntRes2d_Situation {
+	IntRes2d_Inside = 0,
+	IntRes2d_Outside = 1,
+	IntRes2d_Unknown = 2,
 };
 
 /* end public enums declaration */

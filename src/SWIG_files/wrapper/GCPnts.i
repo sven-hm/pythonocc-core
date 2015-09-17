@@ -38,17 +38,17 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 /* end typedefs declaration */
 
 /* public enums */
-enum GCPnts_AbscissaType {
-	GCPnts_LengthParametrized = 0,
-	GCPnts_Parametrized = 1,
-	GCPnts_AbsComposite = 2,
-};
-
 enum GCPnts_DeflectionType {
 	GCPnts_Linear = 0,
 	GCPnts_Circular = 1,
 	GCPnts_Curved = 2,
 	GCPnts_DefComposite = 3,
+};
+
+enum GCPnts_AbscissaType {
+	GCPnts_LengthParametrized = 0,
+	GCPnts_Parametrized = 1,
+	GCPnts_AbsComposite = 2,
 };
 
 /* end public enums declaration */

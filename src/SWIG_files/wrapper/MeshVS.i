@@ -42,16 +42,6 @@ typedef MeshVS_Mesh * MeshVS_MeshPtr;
 
 /* public enums */
 enum  {
-	MeshVS_BP_Mesh = 5,
-	MeshVS_BP_NodalColor = 10,
-	MeshVS_BP_ElemColor = 15,
-	MeshVS_BP_Text = 20,
-	MeshVS_BP_Vector = 25,
-	MeshVS_BP_User = 30,
-	MeshVS_BP_Default = MeshVS_BP_User,
-};
-
-enum  {
 	MeshVS_DMF_WireFrame = 1,
 	MeshVS_DMF_Shading = 2,
 	MeshVS_DMF_Shrink = 3,
@@ -68,6 +58,17 @@ enum  {
 	MeshVS_DMF_SelectionPrs = 512,
 	MeshVS_DMF_HilightPrs = 1024,
 	MeshVS_DMF_User = 2048,
+};
+
+enum MeshVS_EntityType {
+	MeshVS_ET_NONE = 0,
+	MeshVS_ET_Node = 1,
+	MeshVS_ET_0D = 2,
+	MeshVS_ET_Link = 4,
+	MeshVS_ET_Face = 8,
+	MeshVS_ET_Volume = 16,
+	MeshVS_ET_Element = MeshVS_ET_0D | MeshVS_ET_Link | MeshVS_ET_Face | MeshVS_ET_Volume,
+	MeshVS_ET_All = MeshVS_ET_Element | MeshVS_ET_Node,
 };
 
 enum MeshVS_DrawerAttribute {
@@ -113,21 +114,20 @@ enum MeshVS_DrawerAttribute {
 	MeshVS_DA_User = 39,
 };
 
-enum MeshVS_EntityType {
-	MeshVS_ET_NONE = 0,
-	MeshVS_ET_Node = 1,
-	MeshVS_ET_0D = 2,
-	MeshVS_ET_Link = 4,
-	MeshVS_ET_Face = 8,
-	MeshVS_ET_Volume = 16,
-	MeshVS_ET_Element = MeshVS_ET_0D | MeshVS_ET_Link | MeshVS_ET_Face | MeshVS_ET_Volume,
-	MeshVS_ET_All = MeshVS_ET_Element | MeshVS_ET_Node,
-};
-
 enum MeshVS_MeshSelectionMethod {
 	MeshVS_MSM_PRECISE = 0,
 	MeshVS_MSM_NODES = 1,
 	MeshVS_MSM_BOX = 2,
+};
+
+enum  {
+	MeshVS_BP_Mesh = 5,
+	MeshVS_BP_NodalColor = 10,
+	MeshVS_BP_ElemColor = 15,
+	MeshVS_BP_Text = 20,
+	MeshVS_BP_Vector = 25,
+	MeshVS_BP_User = 30,
+	MeshVS_BP_Default = MeshVS_BP_User,
 };
 
 enum MeshVS_SelectionModeFlags {

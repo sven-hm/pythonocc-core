@@ -42,14 +42,6 @@ typedef NCollection_Handle <Message_ArrayOfMsg> Handle_Message_ArrayOfMsg;
 /* end typedefs declaration */
 
 /* public enums */
-enum Message_Gravity {
-	Message_Trace = 0,
-	Message_Info = 1,
-	Message_Warning = 2,
-	Message_Alarm = 3,
-	Message_Fail = 4,
-};
-
 enum Message_Status {
 	Message_None = 0,
 	Message_Done1 = Message_DONE,
@@ -180,6 +172,14 @@ enum Message_Status {
 	Message_Fail30 = 126,
 	Message_Fail31 = 127,
 	Message_Fail32 = 128,
+};
+
+enum Message_Gravity {
+	Message_Trace = 0,
+	Message_Info = 1,
+	Message_Warning = 2,
+	Message_Alarm = 3,
+	Message_Fail = 4,
 };
 
 enum Message_StatusType {

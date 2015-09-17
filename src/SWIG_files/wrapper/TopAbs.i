@@ -38,11 +38,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 /* end typedefs declaration */
 
 /* public enums */
-enum TopAbs_Orientation {
-	TopAbs_FORWARD = 0,
-	TopAbs_REVERSED = 1,
-	TopAbs_INTERNAL = 2,
-	TopAbs_EXTERNAL = 3,
+enum TopAbs_State {
+	TopAbs_IN = 0,
+	TopAbs_OUT = 1,
+	TopAbs_ON = 2,
+	TopAbs_UNKNOWN = 3,
 };
 
 enum TopAbs_ShapeEnum {
@@ -57,11 +57,11 @@ enum TopAbs_ShapeEnum {
 	TopAbs_SHAPE = 8,
 };
 
-enum TopAbs_State {
-	TopAbs_IN = 0,
-	TopAbs_OUT = 1,
-	TopAbs_ON = 2,
-	TopAbs_UNKNOWN = 3,
+enum TopAbs_Orientation {
+	TopAbs_FORWARD = 0,
+	TopAbs_REVERSED = 1,
+	TopAbs_INTERNAL = 2,
+	TopAbs_EXTERNAL = 3,
 };
 
 /* end public enums declaration */

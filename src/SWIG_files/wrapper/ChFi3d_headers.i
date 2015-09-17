@@ -18,13 +18,13 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 
 */
 %{
+#include<ChFi3d.hxx>
 #include<ChFi3d_Builder.hxx>
 #include<ChFi3d_Builder_0.hxx>
 #include<ChFi3d_ChBuilder.hxx>
 #include<ChFi3d_FilBuilder.hxx>
 #include<ChFi3d_FilletShape.hxx>
 #include<ChFi3d_SearchSing.hxx>
-#include<ChFi3d.hxx>
 #include<BRepAdaptor_Array1OfCurve.hxx>
 #include<BRepAdaptor_CompCurve.hxx>
 #include<BRepAdaptor_Curve.hxx>
@@ -37,8 +37,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<BRepAdaptor_Surface.hxx>
 #include<TopoDS.hxx>
 #include<TopoDS_Builder.hxx>
-#include<TopoDS_Compound.hxx>
 #include<TopoDS_CompSolid.hxx>
+#include<TopoDS_Compound.hxx>
 #include<TopoDS_Edge.hxx>
 #include<TopoDS_Face.hxx>
 #include<TopoDS_FrozenShape.hxx>
@@ -50,8 +50,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<TopoDS_Shape.hxx>
 #include<TopoDS_Shell.hxx>
 #include<TopoDS_Solid.hxx>
-#include<TopoDS_TCompound.hxx>
 #include<TopoDS_TCompSolid.hxx>
+#include<TopoDS_TCompound.hxx>
 #include<TopoDS_TEdge.hxx>
 #include<TopoDS_TFace.hxx>
 #include<TopoDS_TShape.hxx>
@@ -74,10 +74,10 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_Atomic.hxx>
 #include<Standard_Boolean.hxx>
 #include<Standard_Byte.hxx>
-#include<Standard_Character.hxx>
 #include<Standard_CLocaleSentry.hxx>
-#include<Standard_ConstructionError.hxx>
 #include<Standard_CString.hxx>
+#include<Standard_Character.hxx>
+#include<Standard_ConstructionError.hxx>
 #include<Standard_DefineAlloc.hxx>
 #include<Standard_DefineException.hxx>
 #include<Standard_DefineHandle.hxx>
@@ -92,20 +92,19 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_Failure.hxx>
 #include<Standard_GUID.hxx>
 #include<Standard_HandlerStatus.hxx>
+#include<Standard_IStream.hxx>
 #include<Standard_ImmutableObject.hxx>
 #include<Standard_Integer.hxx>
 #include<Standard_InternalType.hxx>
-#include<Standard_IStream.hxx>
 #include<Standard_JmpBuf.hxx>
 #include<Standard_KindOfType.hxx>
 #include<Standard_LicenseError.hxx>
 #include<Standard_LicenseNotFound.hxx>
-#include<Standard_Macro.hxx>
-#include<Standard_math.hxx>
 #include<Standard_MMgrOpt.hxx>
 #include<Standard_MMgrRaw.hxx>
 #include<Standard_MMgrRoot.hxx>
 #include<Standard_MMgrTBBalloc.hxx>
+#include<Standard_Macro.hxx>
 #include<Standard_MultiplyDefined.hxx>
 #include<Standard_Mutex.hxx>
 #include<Standard_NegativeValue.hxx>
@@ -123,16 +122,16 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_PByte.hxx>
 #include<Standard_PCharacter.hxx>
 #include<Standard_PErrorHandler.hxx>
+#include<Standard_PExtCharacter.hxx>
 #include<Standard_Persistent.hxx>
 #include<Standard_Persistent_proto.hxx>
-#include<Standard_PExtCharacter.hxx>
 #include<Standard_PrimitiveTypes.hxx>
 #include<Standard_ProgramError.hxx>
 #include<Standard_RangeError.hxx>
 #include<Standard_Real.hxx>
+#include<Standard_SStream.hxx>
 #include<Standard_ShortReal.hxx>
 #include<Standard_Size.hxx>
-#include<Standard_SStream.hxx>
 #include<Standard_Storable.hxx>
 #include<Standard_Stream.hxx>
 #include<Standard_ThreadId.hxx>
@@ -143,10 +142,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Standard_Type.hxx>
 #include<Standard_TypeDef.hxx>
 #include<Standard_TypeMismatch.hxx>
-#include<Standard_Underflow.hxx>
 #include<Standard_UUID.hxx>
+#include<Standard_Underflow.hxx>
 #include<Standard_Version.hxx>
 #include<Standard_WayOfLife.hxx>
+#include<Standard_math.hxx>
 #include<Standard_values.h>
 #include<GeomAbs_BSplKnotDistribution.hxx>
 #include<GeomAbs_CurveForm.hxx>
@@ -260,12 +260,12 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Geom_Axis1Placement.hxx>
 #include<Geom_Axis2Placement.hxx>
 #include<Geom_AxisPlacement.hxx>
+#include<Geom_BSplineCurve.hxx>
+#include<Geom_BSplineSurface.hxx>
 #include<Geom_BezierCurve.hxx>
 #include<Geom_BezierSurface.hxx>
 #include<Geom_BoundedCurve.hxx>
 #include<Geom_BoundedSurface.hxx>
-#include<Geom_BSplineCurve.hxx>
-#include<Geom_BSplineSurface.hxx>
 #include<Geom_CartesianPoint.hxx>
 #include<Geom_Circle.hxx>
 #include<Geom_Conic.hxx>
@@ -316,7 +316,6 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<TopOpeBRepBuild_DataMapIteratorOfDataMapOfShapeListOfShapeListOfShape.hxx>
 #include<TopOpeBRepBuild_DataMapNodeOfDataMapOfShapeListOfShapeListOfShape.hxx>
 #include<TopOpeBRepBuild_DataMapOfShapeListOfShapeListOfShape.hxx>
-#include<TopOpeBRepBuild_define.hxx>
 #include<TopOpeBRepBuild_EdgeBuilder.hxx>
 #include<TopOpeBRepBuild_FaceAreaBuilder.hxx>
 #include<TopOpeBRepBuild_FaceBuilder.hxx>
@@ -327,7 +326,6 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<TopOpeBRepBuild_HBuilder.hxx>
 #include<TopOpeBRepBuild_IndexedDataMapNodeOfIndexedDataMapOfShapeVertexInfo.hxx>
 #include<TopOpeBRepBuild_IndexedDataMapOfShapeVertexInfo.hxx>
-#include<TopOpeBRepBuild_kpresu.hxx>
 #include<TopOpeBRepBuild_ListIteratorOfListOfListOfLoop.hxx>
 #include<TopOpeBRepBuild_ListIteratorOfListOfLoop.hxx>
 #include<TopOpeBRepBuild_ListIteratorOfListOfPave.hxx>
@@ -344,12 +342,12 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<TopOpeBRepBuild_LoopClassifier.hxx>
 #include<TopOpeBRepBuild_LoopEnum.hxx>
 #include<TopOpeBRepBuild_LoopSet.hxx>
-#include<TopOpeBRepBuild_Pave.hxx>
-#include<TopOpeBRepBuild_PaveClassifier.hxx>
-#include<TopOpeBRepBuild_PaveSet.hxx>
 #include<TopOpeBRepBuild_PBuilder.hxx>
 #include<TopOpeBRepBuild_PGTopo.hxx>
 #include<TopOpeBRepBuild_PWireEdgeSet.hxx>
+#include<TopOpeBRepBuild_Pave.hxx>
+#include<TopOpeBRepBuild_PaveClassifier.hxx>
+#include<TopOpeBRepBuild_PaveSet.hxx>
 #include<TopOpeBRepBuild_ShapeListOfShape.hxx>
 #include<TopOpeBRepBuild_ShapeSet.hxx>
 #include<TopOpeBRepBuild_ShellFaceClassifier.hxx>
@@ -363,6 +361,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<TopOpeBRepBuild_WireEdgeClassifier.hxx>
 #include<TopOpeBRepBuild_WireEdgeSet.hxx>
 #include<TopOpeBRepBuild_WireToFace.hxx>
+#include<TopOpeBRepBuild_define.hxx>
+#include<TopOpeBRepBuild_kpresu.hxx>
 #include<Adaptor3d_Curve.hxx>
 #include<Adaptor3d_CurveOnSurface.hxx>
 #include<Adaptor3d_CurveOnSurfacePtr.hxx>
@@ -388,8 +388,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<math_Array1OfValueAndWeight.hxx>
 #include<math_BFGS.hxx>
 #include<math_BissecNewton.hxx>
-#include<math_BracketedRoot.hxx>
 #include<math_BracketMinimum.hxx>
+#include<math_BracketedRoot.hxx>
 #include<math_BrentMinimum.hxx>
 #include<math_CompareOfValueAndWeight.hxx>
 #include<math_ComputeGaussPointsAndWeights.hxx>
@@ -432,11 +432,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<math_QuickSortOfValueAndWeight.hxx>
 #include<math_RealRandom.hxx>
 #include<math_Recipes.hxx>
+#include<math_SVD.hxx>
 #include<math_SingleTabOfInteger.hxx>
 #include<math_SingleTabOfReal.hxx>
 #include<math_SingularMatrix.hxx>
 #include<math_Status.hxx>
-#include<math_SVD.hxx>
 #include<math_TrigonometricFunctionRoots.hxx>
 #include<math_Uzawa.hxx>
 #include<math_ValueAndWeight.hxx>
@@ -503,12 +503,14 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<TopOpeBRepDS_Check.hxx>
 #include<TopOpeBRepDS_CheckStatus.hxx>
 #include<TopOpeBRepDS_Config.hxx>
-#include<TopOpeBRepDS_connex.hxx>
 #include<TopOpeBRepDS_Curve.hxx>
 #include<TopOpeBRepDS_CurveData.hxx>
 #include<TopOpeBRepDS_CurveExplorer.hxx>
 #include<TopOpeBRepDS_CurveIterator.hxx>
 #include<TopOpeBRepDS_CurvePointInterference.hxx>
+#include<TopOpeBRepDS_DRAW.hxx>
+#include<TopOpeBRepDS_DSS.hxx>
+#include<TopOpeBRepDS_DSX.hxx>
 #include<TopOpeBRepDS_DataMapIteratorOfDataMapOfCheckStatus.hxx>
 #include<TopOpeBRepDS_DataMapIteratorOfDataMapOfIntegerListOfInterference.hxx>
 #include<TopOpeBRepDS_DataMapIteratorOfDataMapOfInterferenceListOfInterference.hxx>
@@ -538,24 +540,20 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<TopOpeBRepDS_DataMapOfShapeListOfShapeOn1State.hxx>
 #include<TopOpeBRepDS_DataMapOfShapeState.hxx>
 #include<TopOpeBRepDS_DataStructure.hxx>
-#include<TopOpeBRepDS_define.hxx>
 #include<TopOpeBRepDS_DoubleMapIteratorOfDoubleMapOfIntegerShape.hxx>
 #include<TopOpeBRepDS_DoubleMapNodeOfDoubleMapOfIntegerShape.hxx>
 #include<TopOpeBRepDS_DoubleMapOfIntegerShape.hxx>
-#include<TopOpeBRepDS_DRAW.hxx>
-#include<TopOpeBRepDS_DSS.hxx>
-#include<TopOpeBRepDS_DSX.hxx>
 #include<TopOpeBRepDS_Dumper.hxx>
+#include<TopOpeBRepDS_EIR.hxx>
+#include<TopOpeBRepDS_EXPORT.hxx>
 #include<TopOpeBRepDS_Edge3dInterferenceTool.hxx>
 #include<TopOpeBRepDS_EdgeInterferenceTool.hxx>
 #include<TopOpeBRepDS_EdgeVertexInterference.hxx>
-#include<TopOpeBRepDS_EIR.hxx>
 #include<TopOpeBRepDS_Explorer.hxx>
-#include<TopOpeBRepDS_EXPORT.hxx>
+#include<TopOpeBRepDS_FIR.hxx>
 #include<TopOpeBRepDS_FaceEdgeInterference.hxx>
 #include<TopOpeBRepDS_FaceInterferenceTool.hxx>
 #include<TopOpeBRepDS_Filter.hxx>
-#include<TopOpeBRepDS_FIR.hxx>
 #include<TopOpeBRepDS_GapFiller.hxx>
 #include<TopOpeBRepDS_GapTool.hxx>
 #include<TopOpeBRepDS_GeometryData.hxx>
@@ -586,10 +584,7 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<TopOpeBRepDS_PointExplorer.hxx>
 #include<TopOpeBRepDS_PointIterator.hxx>
 #include<TopOpeBRepDS_ProcessInterferencesTool.hxx>
-#include<TopOpeBRepDS_reDEB.hxx>
 #include<TopOpeBRepDS_Reducer.hxx>
-#include<TopOpeBRepDS_repvg.hxx>
-#include<TopOpeBRepDS_samdom.hxx>
 #include<TopOpeBRepDS_ShapeData.hxx>
 #include<TopOpeBRepDS_ShapeShapeInterference.hxx>
 #include<TopOpeBRepDS_ShapeSurface.hxx>
@@ -603,6 +598,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<TopOpeBRepDS_TKI.hxx>
 #include<TopOpeBRepDS_TOOL.hxx>
 #include<TopOpeBRepDS_Transition.hxx>
+#include<TopOpeBRepDS_connex.hxx>
+#include<TopOpeBRepDS_define.hxx>
+#include<TopOpeBRepDS_reDEB.hxx>
+#include<TopOpeBRepDS_repvg.hxx>
+#include<TopOpeBRepDS_samdom.hxx>
 #include<Bnd_Array1OfBox.hxx>
 #include<Bnd_Array1OfBox2d.hxx>
 #include<Bnd_Array1OfSphere.hxx>
@@ -621,9 +621,9 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Bnd_SequenceNodeOfSeqOfBox.hxx>
 #include<Bnd_Sphere.hxx>
 #include<Geom2d_AxisPlacement.hxx>
+#include<Geom2d_BSplineCurve.hxx>
 #include<Geom2d_BezierCurve.hxx>
 #include<Geom2d_BoundedCurve.hxx>
-#include<Geom2d_BSplineCurve.hxx>
 #include<Geom2d_CartesianPoint.hxx>
 #include<Geom2d_Circle.hxx>
 #include<Geom2d_Conic.hxx>
@@ -650,15 +650,15 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<GeomAdaptor_HSurface.hxx>
 #include<GeomAdaptor_Surface.hxx>
 #include<GeomFill.hxx>
-#include<GeomFill_ApproxStyle.hxx>
 #include<GeomFill_AppSurf.hxx>
 #include<GeomFill_AppSweep.hxx>
+#include<GeomFill_ApproxStyle.hxx>
 #include<GeomFill_Array1OfLocationLaw.hxx>
 #include<GeomFill_Array1OfSectionLaw.hxx>
-#include<GeomFill_BezierCurves.hxx>
-#include<GeomFill_Boundary.hxx>
-#include<GeomFill_BoundWithSurf.hxx>
 #include<GeomFill_BSplineCurves.hxx>
+#include<GeomFill_BezierCurves.hxx>
+#include<GeomFill_BoundWithSurf.hxx>
+#include<GeomFill_Boundary.hxx>
 #include<GeomFill_CircularBlendFunc.hxx>
 #include<GeomFill_ConstantBiNormal.hxx>
 #include<GeomFill_ConstrainedFilling.hxx>
@@ -686,10 +686,10 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<GeomFill_HArray1OfSectionLaw.hxx>
 #include<GeomFill_HSequenceOfAx2.hxx>
 #include<GeomFill_Line.hxx>
+#include<GeomFill_LocFunction.hxx>
 #include<GeomFill_LocationDraft.hxx>
 #include<GeomFill_LocationGuide.hxx>
 #include<GeomFill_LocationLaw.hxx>
-#include<GeomFill_LocFunction.hxx>
 #include<GeomFill_NSections.hxx>
 #include<GeomFill_Pipe.hxx>
 #include<GeomFill_PipeError.hxx>
@@ -748,15 +748,15 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<BRepBlend_AppSurf.hxx>
 #include<BRepBlend_AppSurface.hxx>
 #include<BRepBlend_BlendTool.hxx>
-#include<BRepBlend_Chamfer.hxx>
-#include<BRepBlend_ChamfInv.hxx>
-#include<BRepBlend_ChAsym.hxx>
-#include<BRepBlend_ChAsymInv.hxx>
-#include<BRepBlend_ConstRad.hxx>
-#include<BRepBlend_ConstRadInv.hxx>
 #include<BRepBlend_CSCircular.hxx>
 #include<BRepBlend_CSConstRad.hxx>
 #include<BRepBlend_CSWalking.hxx>
+#include<BRepBlend_ChAsym.hxx>
+#include<BRepBlend_ChAsymInv.hxx>
+#include<BRepBlend_ChamfInv.hxx>
+#include<BRepBlend_Chamfer.hxx>
+#include<BRepBlend_ConstRad.hxx>
+#include<BRepBlend_ConstRadInv.hxx>
 #include<BRepBlend_CurvPointRadInv.hxx>
 #include<BRepBlend_EvolRad.hxx>
 #include<BRepBlend_EvolRadInv.hxx>
@@ -1142,11 +1142,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<TColStd_StdMapNodeOfMapOfReal.hxx>
 #include<TColStd_StdMapNodeOfMapOfTransient.hxx>
 #include<TCollection.hxx>
+#include<TCollection_AVLBaseNode.hxx>
+#include<TCollection_AVLBaseNodePtr.hxx>
 #include<TCollection_Array1Descriptor.hxx>
 #include<TCollection_Array2Descriptor.hxx>
 #include<TCollection_AsciiString.hxx>
-#include<TCollection_AVLBaseNode.hxx>
-#include<TCollection_AVLBaseNodePtr.hxx>
 #include<TCollection_BaseSequence.hxx>
 #include<TCollection_BasicMap.hxx>
 #include<TCollection_BasicMapIterator.hxx>
@@ -1178,11 +1178,11 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_Error.hxx>
 #include<Storage_HArrayOfCallBack.hxx>
 #include<Storage_HArrayOfSchema.hxx>
-#include<Storage_HeaderData.hxx>
 #include<Storage_HPArray.hxx>
 #include<Storage_HSeqOfCallBack.hxx>
 #include<Storage_HSeqOfPersistent.hxx>
 #include<Storage_HSeqOfRoot.hxx>
+#include<Storage_HeaderData.hxx>
 #include<Storage_IndexedDataMapNodeOfPType.hxx>
 #include<Storage_InternalData.hxx>
 #include<Storage_Macros.hxx>
@@ -1191,8 +1191,8 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_MapPSDHasher.hxx>
 #include<Storage_OpenMode.hxx>
 #include<Storage_PArray.hxx>
-#include<Storage_Position.hxx>
 #include<Storage_PType.hxx>
+#include<Storage_Position.hxx>
 #include<Storage_Root.hxx>
 #include<Storage_RootData.hxx>
 #include<Storage_Schema.hxx>
@@ -1203,7 +1203,6 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_SequenceNodeOfSeqOfPersistent.hxx>
 #include<Storage_SequenceNodeOfSeqOfRoot.hxx>
 #include<Storage_SolveMode.hxx>
-#include<Storage_stCONSTclCOM.hxx>
 #include<Storage_StreamExtCharParityError.hxx>
 #include<Storage_StreamFormatError.hxx>
 #include<Storage_StreamModeError.hxx>
@@ -1212,25 +1211,26 @@ along with pythonOCC.  If not, see <http://www.gnu.org/licenses/>.
 #include<Storage_StreamWriteError.hxx>
 #include<Storage_TypeData.hxx>
 #include<Storage_TypedCallBack.hxx>
+#include<Storage_stCONSTclCOM.hxx>
 %};
-%import BRepAdaptor.i
-%import TopoDS.i
-%import TopAbs.i
-%import Standard.i
-%import GeomAbs.i
-%import ChFiDS.i
-%import TopTools.i
-%import Geom.i
-%import TopOpeBRepBuild.i
 %import Adaptor3d.i
-%import math.i
-%import Law.i
-%import gp.i
-%import TopOpeBRepDS.i
+%import BRepAdaptor.i
+%import BRepBlend.i
 %import Bnd.i
+%import ChFiDS.i
+%import Geom.i
 %import Geom2d.i
+%import GeomAbs.i
 %import GeomAdaptor.i
 %import GeomFill.i
 %import IntSurf.i
-%import BRepBlend.i
+%import Law.i
+%import Standard.i
 %import TColStd.i
+%import TopAbs.i
+%import TopOpeBRepBuild.i
+%import TopOpeBRepDS.i
+%import TopTools.i
+%import TopoDS.i
+%import gp.i
+%import math.i
