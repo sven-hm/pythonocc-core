@@ -347,10 +347,10 @@ class NETGENPlugin_NETGEN_2D_ONLY : public SMESH_2D_Algo {
 	:param aShape:
 	:type aShape: TopoDS_Shape &
 	:param aStatus:
-	:type aStatus: Hypothesis_Status &
+	:type aStatus: SMESH_Hypothesis::Hypothesis_Status &
 	:rtype: bool
 ") CheckHypothesis;
-		bool CheckHypothesis (SMESH_Mesh & aMesh,const TopoDS_Shape & aShape,Hypothesis_Status & aStatus);
+		bool CheckHypothesis (SMESH_Mesh & aMesh,const TopoDS_Shape & aShape,SMESH_Hypothesis::Hypothesis_Status & aStatus);
 		%feature("compactdefaultargs") Compute;
 		%feature("autodoc", "	:param aMesh:
 	:type aMesh: SMESH_Mesh &
