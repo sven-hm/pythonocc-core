@@ -201,6 +201,7 @@ option_with_default(PYTHONOCC_WRAP_OCAF "Compile OCE Application Framework wrapp
 option_with_default(PYTHONOCC_WRAP_SMESH "Smesh wrapper" FALSE)
 if (PYTHONOCC_WRAP_SMESH)
   option_with_default(PYTHONOCC_WRAP_NETGEN "netgen wrapper" FALSE)
+  option_with_default(PYTHONOCC_WRAP_TETGEN "netgen wrapper" FALSE)
 endif()
 
 ###################
@@ -279,6 +280,13 @@ if(PYTHONOCC_WRAP_SMESH)
   include_directories(${SMESH_INCLUDE_PATH})
   set(SMESH_LIBRARIES SMESH)
   link_directories(${SMESH_LIB_PATH})
+  ##########
+  # Tetgen #
+  ##########
+  if(PYTHONOCC_WRAP_TETGEN)
+    include_directories(${TETGEN_INCLUDE_PATH})
+    link_directories(${TETGEN_LIB_PATH})
+  endif()
   # boost headers are required
   find_path(BOOST_BUNDLED_DIR NAMES shared_ptr.hpp PATHS ${SMESH_INCLUDE_PATH}/boost)
   if(BOOST_BUNDLED_DIR_FOUND)
